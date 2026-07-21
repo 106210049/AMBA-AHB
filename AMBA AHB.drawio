@@ -721,10 +721,61 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Hd4ECfvz_bm4RMetZK8C" name="Master Interface">
-    <mxGraphModel dx="764" dy="1105" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="402" dy="582" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;MASTER&lt;/b&gt;" vertex="1">
+          <mxGeometry height="320" width="160" x="320" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-2" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="214.74" as="sourcePoint" />
+            <mxPoint x="520" y="214.74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-3" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="244.74" as="sourcePoint" />
+            <mxPoint x="520" y="244.74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-4" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="274.74" as="sourcePoint" />
+            <mxPoint x="520" y="274.74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-6" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="304.74" as="sourcePoint" />
+            <mxPoint x="520" y="304.74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-7" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="334.74" as="sourcePoint" />
+            <mxPoint x="520" y="334.74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-8" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="364.74" as="sourcePoint" />
+            <mxPoint x="520" y="364.74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-9" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="394.74" as="sourcePoint" />
+            <mxPoint x="520" y="394.74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-10" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="424.74" as="sourcePoint" />
+            <mxPoint x="520" y="424.74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

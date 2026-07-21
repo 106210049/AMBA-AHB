@@ -1,14 +1,20 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" pages="4">
   <diagram id="00dOMP4ly3Yvcw6Omt_P" name="AHB Block Diagram">
-    <mxGraphModel dx="637" dy="921" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="437" dy="631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="WVtcaOnAu4kVJNJomXHp-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;MASTER&lt;/b&gt;" vertex="1">
-          <mxGeometry height="240" width="120" x="80" y="160" as="geometry" />
+          <mxGeometry height="240" width="80" x="80" y="160" as="geometry" />
         </mxCell>
-        <mxCell id="WVtcaOnAu4kVJNJomXHp-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="ADDRESS DECODER" vertex="1">
-          <mxGeometry height="80" width="120" x="280" y="240" as="geometry" />
+        <mxCell id="WVtcaOnAu4kVJNJomXHp-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;ADDRESS DECODER&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="280" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="WVtcaOnAu4kVJNJomXHp-4" edge="1" parent="1" source="WVtcaOnAu4kVJNJomXHp-1" style="endArrow=classic;html=1;rounded=0;exitX=1.009;exitY=0.335;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="170" y="240" as="sourcePoint" />
+            <mxPoint x="561.2" y="240" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>

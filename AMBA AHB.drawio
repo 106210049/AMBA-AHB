@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" pages="4">
   <diagram id="00dOMP4ly3Yvcw6Omt_P" name="AHB Block Diagram">
-    <mxGraphModel dx="437" dy="631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="637" dy="921" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,11 +10,20 @@
         <mxCell id="WVtcaOnAu4kVJNJomXHp-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;ADDRESS DECODER&lt;/b&gt;" vertex="1">
           <mxGeometry height="80" width="120" x="280" y="280" as="geometry" />
         </mxCell>
-        <mxCell id="WVtcaOnAu4kVJNJomXHp-4" edge="1" parent="1" source="WVtcaOnAu4kVJNJomXHp-1" style="endArrow=classic;html=1;rounded=0;exitX=1.009;exitY=0.335;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+        <mxCell id="WVtcaOnAu4kVJNJomXHp-4" edge="1" parent="1" source="WVtcaOnAu4kVJNJomXHp-1" style="endArrow=classic;html=1;rounded=0;exitX=1.009;exitY=0.335;exitDx=0;exitDy=0;exitPerimeter=0;strokeWidth=3;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint x="170" y="240" as="sourcePoint" />
             <mxPoint x="561.2" y="240" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="WVtcaOnAu4kVJNJomXHp-5" edge="1" parent="1" source="WVtcaOnAu4kVJNJomXHp-6" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=3;" target="WVtcaOnAu4kVJNJomXHp-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="340" y="240" as="sourcePoint" />
+            <mxPoint x="390" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WVtcaOnAu4kVJNJomXHp-6" parent="1" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="330" y="230" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

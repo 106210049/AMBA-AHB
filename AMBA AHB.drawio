@@ -1172,7 +1172,7 @@
         <mxCell id="F29y9cQO9-wdVcVBhfUc-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="!write &amp;amp; hready" vertex="1">
           <mxGeometry height="20" width="100" x="330" y="380" as="geometry" />
         </mxCell>
-        <mxCell id="F29y9cQO9-wdVcVBhfUc-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=0;" value="hready &amp;amp; (single | last beat)" vertex="1">
+        <mxCell id="F29y9cQO9-wdVcVBhfUc-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=0;" value="hready &amp;amp; (single || last beat)" vertex="1">
           <mxGeometry height="30" width="100" x="375" y="300" as="geometry" />
         </mxCell>
         <mxCell id="F29y9cQO9-wdVcVBhfUc-6" edge="1" parent="1" source="gUlQ52oibdo8bB1fHUDe-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;curved=1;" target="gUlQ52oibdo8bB1fHUDe-3">

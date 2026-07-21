@@ -863,8 +863,8 @@
         <mxCell id="QDNAlJeXV3O_EuQtD1Lo-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_trans" vertex="1">
           <mxGeometry height="20" width="50" x="230" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_data[31:0]" vertex="1">
-          <mxGeometry height="20" width="70" x="210" y="200" as="geometry" />
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_hwdata[31:0]" vertex="1">
+          <mxGeometry height="20" width="80" x="200" y="200" as="geometry" />
         </mxCell>
         <mxCell id="QDNAlJeXV3O_EuQtD1Lo-27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_write" vertex="1">
           <mxGeometry height="20" width="40" x="240" y="220" as="geometry" />
@@ -880,6 +880,24 @@
         </mxCell>
         <mxCell id="QDNAlJeXV3O_EuQtD1Lo-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_hsize[2:0]" vertex="1">
           <mxGeometry height="20" width="70" x="210" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_write_fifo" vertex="1">
+          <mxGeometry height="20" width="70" x="210" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_busy" vertex="1">
+          <mxGeometry height="20" width="40" x="240" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_hclk" vertex="1">
+          <mxGeometry height="20" width="40" x="240" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_hresetn" vertex="1">
+          <mxGeometry height="20" width="50" x="230" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_hrdata" vertex="1">
+          <mxGeometry height="20" width="50" x="230" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_hrdata" vertex="1">
+          <mxGeometry height="20" width="50" x="230" y="430" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

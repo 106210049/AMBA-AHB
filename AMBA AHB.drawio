@@ -361,6 +361,12 @@
         <mxCell id="gUlQ52oibdo8bB1fHUDe-9" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="WAIT_STATE" vertex="1">
           <mxGeometry height="80" width="120" x="440" y="520" as="geometry" />
         </mxCell>
+        <mxCell id="8WBKzOnGMAMBHIHuB8Qa-1" edge="1" parent="1" source="gUlQ52oibdo8bB1fHUDe-5" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" target="gUlQ52oibdo8bB1fHUDe-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="350" y="490" as="sourcePoint" />
+            <mxPoint x="400" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

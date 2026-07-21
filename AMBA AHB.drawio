@@ -721,7 +721,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Hd4ECfvz_bm4RMetZK8C" name="Master Interface">
-    <mxGraphModel dx="413" dy="597" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="588" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -948,7 +948,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="MRvjbU54hm_yxOqb37_F" name="Slave Interface">
-    <mxGraphModel dx="306" dy="442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="255" dy="368" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1089,6 +1089,12 @@
         </mxCell>
         <mxCell id="ZoswcBVd_K9o42RlfrDt-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;USER INPUTS&lt;/span&gt;" vertex="1">
           <mxGeometry height="37.5" width="90" x="100" y="501.25" as="geometry" />
+        </mxCell>
+        <mxCell id="d6eQOLF2cj8y5Wa5i_nI-1" parent="1" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;rotation=-180;" value="" vertex="1">
+          <mxGeometry height="107.5" width="20" x="600" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="d6eQOLF2cj8y5Wa5i_nI-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;AHB BUS OUTPUTS&lt;/span&gt;" vertex="1">
+          <mxGeometry height="37.5" width="90" x="610" y="345" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

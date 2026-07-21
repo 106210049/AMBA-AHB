@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" pages="4">
   <diagram id="00dOMP4ly3Yvcw6Omt_P" name="AHB Block Diagram">
-    <mxGraphModel dx="255" dy="368" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="364" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -204,6 +204,12 @@
         </mxCell>
         <mxCell id="WVtcaOnAu4kVJNJomXHp-50" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="HSEL_3" vertex="1">
           <mxGeometry height="15" width="60" x="400" y="335" as="geometry" />
+        </mxCell>
+        <mxCell id="WVtcaOnAu4kVJNJomXHp-51" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="HWDATA[31:0]" vertex="1">
+          <mxGeometry height="20" width="80" x="180" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="WVtcaOnAu4kVJNJomXHp-52" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="HADDR[31:0]" vertex="1">
+          <mxGeometry height="20" width="80" x="180" y="220" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -936,7 +936,7 @@
           <mxGeometry height="237.5" width="20" x="600" y="202.5" as="geometry" />
         </mxCell>
         <mxCell id="2pUCkIggkBg9coLPtOu6-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;AHB BUS OUTPUTS&lt;/span&gt;" vertex="1">
-          <mxGeometry height="37.5" width="90" x="620" y="302.5" as="geometry" />
+          <mxGeometry height="37.5" width="90" x="610" y="302.5" as="geometry" />
         </mxCell>
         <mxCell id="MeDzCC7dx7rkCgPtS2aG-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;USER INPUTS&lt;/span&gt;" vertex="1">
           <mxGeometry height="37.5" width="60" x="80" y="253.75" as="geometry" />

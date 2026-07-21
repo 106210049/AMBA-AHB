@@ -721,7 +721,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Hd4ECfvz_bm4RMetZK8C" name="Master Interface">
-    <mxGraphModel dx="193" dy="280" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="278" dy="402" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -893,8 +893,8 @@
         <mxCell id="QDNAlJeXV3O_EuQtD1Lo-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_hresetn" vertex="1">
           <mxGeometry height="20" width="50" x="230" y="390" as="geometry" />
         </mxCell>
-        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_hrdata" vertex="1">
-          <mxGeometry height="20" width="50" x="230" y="410" as="geometry" />
+        <mxCell id="QDNAlJeXV3O_EuQtD1Lo-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_hrdata[31:0]" vertex="1">
+          <mxGeometry height="20" width="80" x="200" y="410" as="geometry" />
         </mxCell>
         <mxCell id="QDNAlJeXV3O_EuQtD1Lo-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_hready" vertex="1">
           <mxGeometry height="20" width="50" x="230" y="430" as="geometry" />

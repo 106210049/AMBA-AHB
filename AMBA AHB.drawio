@@ -721,7 +721,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Hd4ECfvz_bm4RMetZK8C" name="Master Interface">
-    <mxGraphModel dx="239" dy="345" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="413" dy="597" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -901,30 +901,6 @@
         </mxCell>
         <mxCell id="QDNAlJeXV3O_EuQtD1Lo-38" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="hresp" vertex="1">
           <mxGeometry height="20" width="50" x="230" y="450" as="geometry" />
-        </mxCell>
-        <mxCell id="UMDgO0NJMtpqaJzSi2Ni-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="o_haddr[31:0]" vertex="1">
-          <mxGeometry height="20" width="70" x="520" y="200" as="geometry" />
-        </mxCell>
-        <mxCell id="UMDgO0NJMtpqaJzSi2Ni-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="o_hwdata[31:0]" vertex="1">
-          <mxGeometry height="20" width="80" x="520" y="230" as="geometry" />
-        </mxCell>
-        <mxCell id="UMDgO0NJMtpqaJzSi2Ni-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="o_hwrite" vertex="1">
-          <mxGeometry height="20" width="50" x="520" y="260" as="geometry" />
-        </mxCell>
-        <mxCell id="UMDgO0NJMtpqaJzSi2Ni-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="o_hsize[2:0]" vertex="1">
-          <mxGeometry height="20" width="70" x="520" y="290" as="geometry" />
-        </mxCell>
-        <mxCell id="UMDgO0NJMtpqaJzSi2Ni-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="o_hburst[2:0]" vertex="1">
-          <mxGeometry height="20" width="70" x="520" y="320" as="geometry" />
-        </mxCell>
-        <mxCell id="UMDgO0NJMtpqaJzSi2Ni-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="o_htrans[2:0]" vertex="1">
-          <mxGeometry height="20" width="70" x="520" y="350" as="geometry" />
-        </mxCell>
-        <mxCell id="UMDgO0NJMtpqaJzSi2Ni-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="o_hmastlock" vertex="1">
-          <mxGeometry height="20" width="70" x="520" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="UMDgO0NJMtpqaJzSi2Ni-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="o_hprot[3:0]" vertex="1">
-          <mxGeometry height="20" width="70" x="520" y="410" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

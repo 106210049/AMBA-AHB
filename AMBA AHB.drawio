@@ -1100,7 +1100,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="AYzUWjTrgIps4r00h7mQ" name="Master FSM">
-    <mxGraphModel dx="364" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="255" dy="368" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1175,9 +1175,6 @@
         <mxCell id="F29y9cQO9-wdVcVBhfUc-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=0;" value="hready &amp;amp; (single || last beat)" vertex="1">
           <mxGeometry height="30" width="100" x="375" y="300" as="geometry" />
         </mxCell>
-        <mxCell id="F29y9cQO9-wdVcVBhfUc-6" edge="1" parent="1" source="gUlQ52oibdo8bB1fHUDe-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;curved=1;" target="gUlQ52oibdo8bB1fHUDe-3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="F29y9cQO9-wdVcVBhfUc-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=0;" value="hready &amp;amp; (single || last beat)" vertex="1">
           <mxGeometry height="30" width="100" x="60" y="380" as="geometry" />
         </mxCell>
@@ -1198,6 +1195,15 @@
             <Array as="points">
               <mxPoint x="260" y="630" />
               <mxPoint x="217.62" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F29y9cQO9-wdVcVBhfUc-20" edge="1" parent="1" source="gUlQ52oibdo8bB1fHUDe-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;innerLoopWaypoints=1;" target="gUlQ52oibdo8bB1fHUDe-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="542.4" y="350" />
+              <mxPoint x="590" y="350" />
+              <mxPoint x="590" y="400" />
             </Array>
           </mxGeometry>
         </mxCell>

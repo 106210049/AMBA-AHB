@@ -1100,7 +1100,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="AYzUWjTrgIps4r00h7mQ" name="Master FSM">
-    <mxGraphModel dx="527" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="437" dy="631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1136,6 +1136,15 @@
             <Array as="points">
               <mxPoint x="160.03" y="560.03" />
               <mxPoint x="160.03" y="240.03" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F29y9cQO9-wdVcVBhfUc-23" edge="1" parent="1" source="gUlQ52oibdo8bB1fHUDe-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="gUlQ52oibdo8bB1fHUDe-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260.03" y="640.03" />
+              <mxPoint x="640.03" y="640.03" />
+              <mxPoint x="640.03" y="240.03" />
             </Array>
           </mxGeometry>
         </mxCell>

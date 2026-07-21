@@ -413,7 +413,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="AHB Interface" id="AxdGKtdG9Rmgfqjtrl1U">
-    <mxGraphModel dx="764" dy="1105" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="437" dy="631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -932,8 +932,11 @@
         <mxCell id="oBGlvGr9nPJA6_KJebiG-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Global signals&lt;/span&gt;" vertex="1">
           <mxGeometry height="30" width="60" x="90" y="260" as="geometry" />
         </mxCell>
-        <mxCell id="oBGlvGr9nPJA6_KJebiG-2" parent="1" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" value="" vertex="1">
-          <mxGeometry height="100" width="20" x="150" y="370" as="geometry" />
+        <mxCell id="oBGlvGr9nPJA6_KJebiG-2" parent="1" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;size=0.5;" value="" vertex="1">
+          <mxGeometry height="30" width="20" x="150" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="oBGlvGr9nPJA6_KJebiG-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Transfer Response&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="80" y="435" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -1,11 +1,14 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" pages="4">
   <diagram id="00dOMP4ly3Yvcw6Omt_P" name="AHB Block Diagram">
-    <mxGraphModel dx="764" dy="1105" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="637" dy="921" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="WVtcaOnAu4kVJNJomXHp-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;MASTER&lt;/b&gt;" vertex="1">
           <mxGeometry height="240" width="120" x="80" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="WVtcaOnAu4kVJNJomXHp-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="ADDRESS DECODER" vertex="1">
+          <mxGeometry height="80" width="120" x="280" y="240" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

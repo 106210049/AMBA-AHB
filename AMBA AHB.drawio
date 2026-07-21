@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0" pages="4">
   <diagram id="00dOMP4ly3Yvcw6Omt_P" name="AHB Block Diagram">
-    <mxGraphModel dx="212" dy="307" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="306" dy="442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -90,7 +90,7 @@
         </mxCell>
         <mxCell id="WVtcaOnAu4kVJNJomXHp-26" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeWidth=3;" target="WVtcaOnAu4kVJNJomXHp-25" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="520" y="380" as="sourcePoint" />
+            <mxPoint x="520" y="460" as="sourcePoint" />
             <mxPoint x="520" y="200" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -99,7 +99,7 @@
         </mxCell>
         <mxCell id="WVtcaOnAu4kVJNJomXHp-27" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeWidth=3;" target="WVtcaOnAu4kVJNJomXHp-30" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="510" y="400" as="sourcePoint" />
+            <mxPoint x="510" y="480" as="sourcePoint" />
             <mxPoint x="510" y="240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -120,6 +120,24 @@
         </mxCell>
         <mxCell id="WVtcaOnAu4kVJNJomXHp-31" parent="1" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" value="" vertex="1">
           <mxGeometry height="20" width="20" x="500" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="WVtcaOnAu4kVJNJomXHp-32" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.167;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=3;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="520" y="460" as="sourcePoint" />
+            <mxPoint x="560" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WVtcaOnAu4kVJNJomXHp-33" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.167;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=3;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="510" y="479.88" as="sourcePoint" />
+            <mxPoint x="560" y="479.88" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WVtcaOnAu4kVJNJomXHp-34" parent="1" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="510" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="WVtcaOnAu4kVJNJomXHp-35" parent="1" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="500" y="390" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

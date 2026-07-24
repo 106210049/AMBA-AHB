@@ -23,7 +23,7 @@ class driver #(
     
     task automatic drive_idle();
     @(vif.cb_drv iff vif.cb_drv.o_hreadyout);
-    vif.cb_drv.i_hsel   <= 1'b0;
+    vif.cb_drv.i_hsel   <= 1'b1;
     vif.cb_drv.i_haddr  <= '0;
     vif.cb_drv.i_hwrite <= 1'b0;
     vif.cb_drv.i_hsize  <= HSIZE_WORD;

@@ -54,6 +54,7 @@ class ahb_trans #(
       bins BYTE = {HSIZE_BYTE};
       bins HWORD = {HSIZE_HWORD};
       bins WORD = {HSIZE_WORD};
+      bins DWORD = {HSIZE_DWORD};
     }
   endgroup
 

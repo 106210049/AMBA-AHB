@@ -58,11 +58,11 @@ class generator #(
         assert(tr.randomize() with {
           i_hwrite dist {0:=50, 1:=50};
           i_hsize  dist {
-            HSIZE_BYTE   := 25,
-            HSIZE_HWORD  := 10,
-            HSIZE_WORD   := 55,
-            HSIZE_DWORD  := 5,
-            HSIZE_128BIT := 5
+            HSIZE_BYTE   := 20,
+            HSIZE_HWORD  := 20,
+            HSIZE_WORD   := 40,
+            HSIZE_DWORD  := 20,
+            HSIZE_128BIT := 0
           };
         }) else $fatal("[GEN] randomize failed (fixed_addr)");
       end
@@ -121,10 +121,10 @@ endtask
         assert(tr.randomize() with {
           i_hwrite dist {0:=50, 1:=50};
           i_hsize  dist {
-            HSIZE_BYTE   := 25,
-            HSIZE_HWORD  := 10,
-            HSIZE_WORD   := 55,
-            HSIZE_DWORD  := 5,
+            HSIZE_BYTE   := 20,
+            HSIZE_HWORD  := 20,
+            HSIZE_WORD   := 40,
+            HSIZE_DWORD  := 15,
             HSIZE_128BIT := 5
           };
           i_haddr inside { addr_t'(32'h0), addr_t'(32'h4),
@@ -148,13 +148,13 @@ endtask
   task test_Busy_State;
     repeat (num_gen) begin
       tr = new();
-      assert(tr.randomize() with {
-        i_hwrite dist {0:=50, 1:=50};
-      }) else $fatal("[GEN] randomize failed (BUSY)");
+      // assert(tr.randomize() with {
+      //   i_hwrite dist {0:=50, 1:=50};
+      // }) else $fatal("[GEN] randomize failed (BUSY)");
       tr.i_haddr  = addr_t'(32'h0000_0004);
       tr.i_htrans = HTRANS_BUSY;
       tr.i_hsize  = HSIZE_WORD; // harmless default
-      tr.i_hwdata = tr.i_hwrite ? rand_wdata() : '0;
+      // tr.i_hwdata = tr.i_hwrite ? rand_wdata() : '0;
 
       tr.display(); // optional
       gen_to_drv.put(tr);

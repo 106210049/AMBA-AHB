@@ -1,7 +1,6 @@
 `timescale 1ns/1ns
 `default_nettype none
-`include "taxi_ahbl_if.sv"
-`include "taxi_ahbl_ram.sv"
+
 `include "ahb_pkg.sv"
 `include "transaction.sv"
 `include "testcase_pkg.sv"

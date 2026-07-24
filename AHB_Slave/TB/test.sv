@@ -22,7 +22,7 @@ program test(taxi_ahbl_if vif);
     // Default config
     //----------------------------------------
     testname = "RAND_ADDR";
-    timeout  = 10000;
+    timeout  = 1000;
 
     //----------------------------------------
     // Override via plusargs
@@ -47,7 +47,7 @@ program test(taxi_ahbl_if vif);
       // Address tests
       //--------------------------------------------------
       "FIXED_ADDR":
-        env_o.agt.cfg_gen(8, 1, FIXED_ADDR);
+        env_o.agt.cfg_gen(10, 1, FIXED_ADDR);
 
       "RAND_ADDR":
         env_o.agt.cfg_gen(16, 0, RAND_ADDR,
@@ -73,7 +73,7 @@ program test(taxi_ahbl_if vif);
       // HSIZE stress test
       //--------------------------------------------------
       "TEST_RAND_HSIZE":
-        env_o.agt.cfg_gen(8, 0, TEST_RAND_HSIZE);
+        env_o.agt.cfg_gen(20, 0, TEST_RAND_HSIZE);
 
       "READ_WAIT_STATE":
         env_o.agt.cfg_gen(8, 1, READ_WAIT_STATE);
@@ -98,8 +98,9 @@ program test(taxi_ahbl_if vif);
     //----------------------------------------
     // Timeout control
     //----------------------------------------
-    #(timeout);
-
+    // #(timeout);
+    wait (env_o.scb.n_total >= env_o.agt.gen.num_gen)
+    #100;
     //----------------------------------------
     // Report + Finish
     //----------------------------------------

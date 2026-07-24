@@ -10,7 +10,7 @@ from collections import Counter
 # ==================================================
 # Config
 # ==================================================
-LOG_DIR = "logs_test/*.log"
+LOG_DIR = "logs/*.log"
 HTML_OUT = "report.html"
 CSV_OUT  = "report.csv"
 

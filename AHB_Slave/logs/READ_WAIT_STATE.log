@@ -1,0 +1,119 @@
+# vsim -c -coverage -debugDB -sv_seed random -voptargs="+acc" work.ahb_tb_top "+TESTNAME=READ_WAIT_STATE" -onfinish final -do "run -all; quit -sim;" 
+# Start time: 17:50:45 on Jul 24,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# Loading sv_std.std
+# Loading work.testcase_pkg(fast)
+# Loading work.ahb_pkg(fast)
+# Loading work.testbench_3_sv_unit(fast)
+# Loading work.ahb_tb_top(fast)
+# Loading work.taxi_ahbl_if(fast)
+# Loading work.taxi_ahbl_ram(fast)
+# Loading work.test(fast)
+# Loading work.sva_checker(fast)
+# Loading work.taxi_ahbl_if(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# Sv_Seed = 665335017
+# run -all
+# [TEST] TESTNAME=READ_WAIT_STATE TIMEOUT=1000
+# [AHB_TRANS]  READ i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
+# [AHB_TRANS]  READ i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
+# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x3e815a79
+# [AHB_TRANS]  READ i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
+# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x5301fafc
+# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0xfbce122
+# [AHB_TRANS]  READ i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
+# [AHB_TRANS]  READ i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [225000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [235000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [265000][MON-ADDR] A=0x4 W=0 HSIZE=WORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [295000][READ][MON-DATA] A=0x4 RDATA=0x0 RESP=0
+# [295000][SB-PASS ] ADDR=0x00000004 SIZE=WORD EXP=0x00000000 ACT=0x00000000
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [325000][MON-ADDR] A=0x4 W=0 HSIZE=WORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [355000][READ][MON-DATA] A=0x4 RDATA=0x0 RESP=0
+# [355000][SB-PASS ] ADDR=0x00000004 SIZE=WORD EXP=0x00000000 ACT=0x00000000
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [385000][MON-ADDR] A=0x4 W=0 HSIZE=WORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [415000][READ][MON-DATA] A=0x4 RDATA=0x0 RESP=0
+# [415000][SB-PASS ] ADDR=0x00000004 SIZE=WORD EXP=0x00000000 ACT=0x00000000
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [425000][MON-ADDR] A=0x4 W=1 HSIZE=WORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [435000][WRITE][MON-DATA] A=0x4 WDATA=0x3e815a79 RESP=0
+# [435000][SB-WRITE] ADDR=0x00000004 SIZE=WORD DATA=0x3e815a79
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [445000][MON-ADDR] A=0x4 W=0 HSIZE=WORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [475000][READ][MON-DATA] A=0x4 RDATA=0x3e815a79 RESP=0
+# [475000][SB-PASS ] ADDR=0x00000004 SIZE=WORD EXP=0x3e815a79 ACT=0x3e815a79
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [505000][MON-ADDR] A=0x4 W=0 HSIZE=WORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [535000][READ][MON-DATA] A=0x4 RDATA=0x3e815a79 RESP=0
+# [535000][SB-PASS ] ADDR=0x00000004 SIZE=WORD EXP=0x3e815a79 ACT=0x3e815a79
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [545000][MON-ADDR] A=0x4 W=1 HSIZE=WORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [555000][WRITE][MON-DATA] A=0x4 WDATA=0x5301fafc RESP=0
+# [555000][SB-WRITE] ADDR=0x00000004 SIZE=WORD DATA=0x5301fafc
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [565000][MON-ADDR] A=0x4 W=1 HSIZE=WORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [575000][WRITE][MON-DATA] A=0x4 WDATA=0xfbce122 RESP=0
+# [575000][SB-WRITE] ADDR=0x00000004 SIZE=WORD DATA=0x0fbce122
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [585000][MON-ADDR] A=0x4 W=1 HSIZE=WORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [595000][WRITE][MON-DATA] A=0x4 WDATA=0xfbce122 RESP=0
+# [595000][SB-WRITE] ADDR=0x00000004 SIZE=WORD DATA=0x0fbce122
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [625000][MON-ADDR] A=0x4 W=0 HSIZE=WORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] OKAY COMPLETE observed
+# [655000][READ][MON-DATA] A=0x4 RDATA=0xfbce122 RESP=0
+# [TEST] TIMEOUT reached
+# 
+# ================ SCOREBOARD SUMMARY ================
+#   Transactions : 10
+#     Writes     : 4
+#     Reads      : 5
+#   Errors       : 0
+#   Pass Rate    : 100.00%
+#   RESULT       : PASS ✅
+# ===================================================
+# 
+# ** Note: $finish    : ./TB/test.sv(111)
+#    Time: 655 ns  Iteration: 1  Instance: /ahb_tb_top/t1
+# Break in Task std/mailbox::get at C:/questasim64_10.7c/win64/../verilog_src/std/std.sv line 41
+#  quit -sim
+# End time: 17:50:49 on Jul 24,2026, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# 

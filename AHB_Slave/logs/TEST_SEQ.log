@@ -1,0 +1,213 @@
+# vsim -c -coverage -debugDB -sv_seed random -voptargs="+acc" work.ahb_tb_top "+TESTNAME=TEST_SEQ" -onfinish final -do "run -all; coverage save -onexit TEST_SEQ.ucdb; quit -sim;" 
+# Start time: 17:50:28 on Jul 24,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.testcase_pkg(fast)
+# Loading work.ahb_pkg(fast)
+# Loading work.testbench_sv_unit(fast)
+# Loading work.ahb_tb_top(fast)
+# Loading work.taxi_ahbl_if(fast)
+# Loading work.taxi_ahbl_ram(fast)
+# Loading work.test(fast)
+# Loading work.sva_checker(fast)
+# Loading work.taxi_ahbl_if(fast)
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# Sv_Seed = 1334345113
+# run -all
+# [TEST] TESTNAME=TEST_SEQ TIMEOUT=1000
+# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=SEQ i_haddr=0x8 i_hwdata=0x3c6071f3
+# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=SEQ i_haddr=0x20 i_hwdata=0xde3c8c45
+# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=SEQ i_haddr=0x8 i_hwdata=0x96f2eb7e
+# [AHB_TRANS]  READ i_hsize=WORD i_htrans=SEQ i_haddr=0x10 i_hwdata=0x0
+# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=SEQ i_haddr=0x0 i_hwdata=0x60cb5092
+# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=SEQ i_haddr=0x0 i_hwdata=0xddd9863b
+# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=SEQ i_haddr=0x20 i_hwdata=0xc565f280
+# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=SEQ i_haddr=0x0 i_hwdata=0x3ea028bb
+# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=SEQ i_haddr=0x8 i_hwdata=0x67d8f91b
+# [AHB_TRANS]  READ i_hsize=WORD i_htrans=SEQ i_haddr=0x8 i_hwdata=0x0
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [225000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 235 ns Started: 235 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [235000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 245 ns Started: 245 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [245000][MON-ADDR] A=0x8 W=1 HSIZE=WORD HTRANS=SEQ
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 255 ns Started: 255 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [255000][WRITE][MON-DATA] A=0x8 WDATA=0x3c6071f3 RESP=0
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 265 ns Started: 265 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [265000][MON-ADDR] A=0x20 W=1 HSIZE=WORD HTRANS=SEQ
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 275 ns Started: 275 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [275000][WRITE][MON-DATA] A=0x20 WDATA=0xde3c8c45 RESP=0
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 285 ns Started: 285 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [285000][MON-ADDR] A=0x20 W=1 HSIZE=WORD HTRANS=SEQ
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 295 ns Started: 295 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [295000][WRITE][MON-DATA] A=0x20 WDATA=0xde3c8c45 RESP=0
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 305 ns Started: 305 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [305000][MON-ADDR] A=0x8 W=1 HSIZE=WORD HTRANS=SEQ
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 315 ns Started: 315 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [315000][WRITE][MON-DATA] A=0x8 WDATA=0x96f2eb7e RESP=0
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 325 ns Started: 325 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [325000][MON-ADDR] A=0x10 W=0 HSIZE=WORD HTRANS=SEQ
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 335 ns Started: 335 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [335000][READ][MON-DATA] A=0x10 RDATA=0x0 RESP=0
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 345 ns Started: 345 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [345000][MON-ADDR] A=0x10 W=0 HSIZE=WORD HTRANS=SEQ
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 355 ns Started: 355 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [355000][READ][MON-DATA] A=0x10 RDATA=0x0 RESP=0
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 365 ns Started: 365 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [365000][MON-ADDR] A=0x0 W=1 HSIZE=WORD HTRANS=SEQ
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 375 ns Started: 375 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [375000][WRITE][MON-DATA] A=0x0 WDATA=0x60cb5092 RESP=0
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 385 ns Started: 385 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [385000][MON-ADDR] A=0x0 W=1 HSIZE=WORD HTRANS=SEQ
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 395 ns Started: 395 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [395000][WRITE][MON-DATA] A=0x0 WDATA=0xddd9863b RESP=0
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 405 ns Started: 405 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [405000][MON-ADDR] A=0x0 W=1 HSIZE=WORD HTRANS=SEQ
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 415 ns Started: 415 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [415000][WRITE][MON-DATA] A=0x0 WDATA=0xddd9863b RESP=0
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 425 ns Started: 425 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [425000][MON-ADDR] A=0x20 W=1 HSIZE=WORD HTRANS=SEQ
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 435 ns Started: 435 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [435000][WRITE][MON-DATA] A=0x20 WDATA=0xc565f280 RESP=0
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 445 ns Started: 445 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [445000][MON-ADDR] A=0x0 W=1 HSIZE=WORD HTRANS=SEQ
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 455 ns Started: 455 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [455000][WRITE][MON-DATA] A=0x0 WDATA=0x3ea028bb RESP=0
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 465 ns Started: 465 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [465000][MON-ADDR] A=0x0 W=1 HSIZE=WORD HTRANS=SEQ
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 475 ns Started: 475 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [475000][WRITE][MON-DATA] A=0x0 WDATA=0x3ea028bb RESP=0
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 485 ns Started: 485 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [485000][MON-ADDR] A=0x8 W=1 HSIZE=WORD HTRANS=SEQ
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 495 ns Started: 495 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [495000][WRITE][MON-DATA] A=0x8 WDATA=0x67d8f91b RESP=0
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 505 ns Started: 505 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [505000][MON-ADDR] A=0x8 W=0 HSIZE=WORD HTRANS=SEQ
+# [PASS] VALID_RESP OK
+# ** Error: [FAIL] HTRANS=SEQ must return ERROR
+#    Time: 515 ns Started: 515 ns  Scope: ahb_tb_top.chk.ASSERT_HTRANS_SEQ_ERROR File: ./TB/sva_checker.sv Line: 104
+# [COVER] OKAY COMPLETE observed
+# [515000][READ][MON-DATA] A=0x8 RDATA=0x67d8f91b RESP=0
+# [TEST] TIMEOUT reached
+# 
+# ================ SCOREBOARD SUMMARY ================
+#   Transactions : 14
+#     Writes     : 11
+#     Reads      : 2
+#   Errors       : 0
+#   Pass Rate    : 100.00%
+#   RESULT       : PASS ✅
+# ===================================================
+# 
+# ** Note: $finish    : ./TB/test.sv(111)
+#    Time: 515 ns  Iteration: 1  Instance: /ahb_tb_top/t1
+# Break in Task std/mailbox::get at C:/questasim64_10.7c/win64/../verilog_src/std/std.sv line 41
+#  coverage save -onexit TEST_SEQ.ucdb
+#  quit -sim
+# Saving coverage database on exit...
+# End time: 17:50:32 on Jul 24,2026, Elapsed time: 0:00:04
+# Errors: 29, Warnings: 0
+# 
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 17:50:32 on Jul 24,2026
+# vlog -reportprogress 300 "+cover" ./TB/taxi_ahbl_if.sv ./RTL/taxi_ahbl_ram.sv ./TB/testbench.sv 
+# -- Compiling interface taxi_ahbl_if
+# -- Compiling module taxi_ahbl_ram
+# -- Compiling package ahb_pkg
+# -- Compiling package testbench_sv_unit
+# -- Importing package ahb_pkg
+# -- Importing package testcase_pkg
+# -- Compiling package testcase_pkg
+# -- Compiling program sva_checker
+# -- Compiling program test
+# -- Compiling module ahb_tb_top
+# 
+# Top level modules:
+# 	ahb_tb_top
+# End time: 17:50:32 on Jul 24,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

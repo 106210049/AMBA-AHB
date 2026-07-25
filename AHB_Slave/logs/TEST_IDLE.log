@@ -1,5 +1,5 @@
 # vsim -c -coverage -debugDB -sv_seed random -voptargs="+acc" work.ahb_tb_top "+TESTNAME=TEST_IDLE" -onfinish final -do "run -all; coverage save -onexit TEST_IDLE.ucdb; quit -sim;" 
-# Start time: 17:50:25 on Jul 24,2026
+# Start time: 23:52:31 on Jul 25,2026
 # ** Note: (vsim-8009) Loading existing optimized design _opt2
 # Loading sv_std.std
 # Loading work.testcase_pkg(fast)
@@ -12,9 +12,11 @@
 # Loading work.sva_checker(fast)
 # Loading work.taxi_ahbl_if(fast)
 # ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
-# Sv_Seed = 1466458081
+# Sv_Seed = 1788704169
 # run -all
 # [TEST] TESTNAME=TEST_IDLE TIMEOUT=1000
+# [AHB_TRANS]  READ i_hsize=WORD i_htrans=IDLE i_haddr=0x0 i_hwdata=0x0
+# [AHB_TRANS]  READ i_hsize=WORD i_htrans=IDLE i_haddr=0x0 i_hwdata=0x0
 # [AHB_TRANS] WRITE i_hsize=WORD i_htrans=IDLE i_haddr=0x0 i_hwdata=0x0
 # [AHB_TRANS] WRITE i_hsize=WORD i_htrans=IDLE i_haddr=0x0 i_hwdata=0x0
 # [AHB_TRANS] WRITE i_hsize=WORD i_htrans=IDLE i_haddr=0x0 i_hwdata=0x0
@@ -22,68 +24,97 @@
 # [AHB_TRANS]  READ i_hsize=WORD i_htrans=IDLE i_haddr=0x0 i_hwdata=0x0
 # [AHB_TRANS]  READ i_hsize=WORD i_htrans=IDLE i_haddr=0x0 i_hwdata=0x0
 # [AHB_TRANS] WRITE i_hsize=WORD i_htrans=IDLE i_haddr=0x0 i_hwdata=0x0
-# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=IDLE i_haddr=0x0 i_hwdata=0x0
-# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=IDLE i_haddr=0x0 i_hwdata=0x0
-# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=IDLE i_haddr=0x0 i_hwdata=0x0
+# [AHB_TRANS]  READ i_hsize=WORD i_htrans=IDLE i_haddr=0x0 i_hwdata=0x0
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [225000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [235000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [245000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [255000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [265000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [275000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [285000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [295000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [305000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [315000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [325000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [335000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [345000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [355000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [365000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [375000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [385000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [395000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [405000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [415000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [425000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [435000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [445000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [455000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [465000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [475000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [485000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [495000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
 # [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [505000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [515000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
 # [TEST] TIMEOUT reached
@@ -103,11 +134,11 @@
 #  coverage save -onexit TEST_IDLE.ucdb
 #  quit -sim
 # Saving coverage database on exit...
-# End time: 17:50:28 on Jul 24,2026, Elapsed time: 0:00:03
+# End time: 23:52:35 on Jul 25,2026, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
 # 
 # QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-# Start time: 17:50:28 on Jul 24,2026
+# Start time: 23:52:35 on Jul 25,2026
 # vlog -reportprogress 300 "+cover" ./TB/taxi_ahbl_if.sv ./RTL/taxi_ahbl_ram.sv ./TB/testbench.sv 
 # -- Compiling interface taxi_ahbl_if
 # -- Compiling module taxi_ahbl_ram
@@ -122,5 +153,5 @@
 # 
 # Top level modules:
 # 	ahb_tb_top
-# End time: 17:50:28 on Jul 24,2026, Elapsed time: 0:00:00
+# End time: 23:52:35 on Jul 25,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0

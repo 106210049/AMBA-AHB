@@ -7,21 +7,22 @@ program sva_checker (taxi_ahbl_if vif);
   // 1. VALID SIGNAL (no X/Z)
   // ==========================================
   property p_valid_resp;
-  @(vif.cb_mon)
-    disable iff (!vif.cb_mon.i_hreset)
-    (vif.cb_mon.i_hsel &&
-     vif.cb_mon.i_htrans[1] &&   // VALID transfer
-     vif.cb_mon.o_hreadyout)
-    |->
-    (!$isunknown(vif.cb_mon.o_hreadyout) &&
-     !$isunknown(vif.cb_mon.o_hresp));
-endproperty
+    @(vif.cb_mon)
+      disable iff (!vif.cb_mon.i_hreset)
+      (vif.cb_mon.i_hsel &&
+      vif.cb_mon.i_htrans[1] &&   // VALID transfer
+      vif.cb_mon.o_hreadyout)
+      |->
+      (!$isunknown(vif.cb_mon.o_hreadyout) &&
+      !$isunknown(vif.cb_mon.o_hresp));
+  endproperty
 
   ASSERT_VALID_RESP: assert property(p_valid_resp)
-  $display("[PASS] VALID_RESP OK");
-else
-  $error("[FAIL] HREADYOUT/HRESP is X/Z");
-
+    $display("[PASS] VALID_RESP OK");
+  else
+    $error("[FAIL] HREADYOUT/HRESP is X/Z");
+  cover property (p_valid_resp)
+    $display("[COVER] VALID_RESP observed");
 
 
   // ==========================================
@@ -36,7 +37,8 @@ else
 
   COVER_OKAY: cover property(p_okay_complete)
     $display("[COVER] OKAY COMPLETE observed");
-
+  cover property (p_okay_complete)
+    $display("[COVER] OKAY COMPLETE observed");
 
   // ==========================================
   // 3. ERROR must be 2-cycle
@@ -54,6 +56,8 @@ else
     $display("[PASS] ERROR 2-cycle OK");
     else
     $error("[FAIL] ERROR must be 2 cycles");
+  cover property (p_error_two_cycle)
+    $display("[COVER] ERROR 2-cycle observed");
 
   // ==========================================
   // 4. No single-cycle ERROR
@@ -71,7 +75,8 @@ else
     $display("[PASS] NO SINGLE ERROR OK");
     else
     $error("[FAIL] Single-cycle ERROR not allowed");
-
+  cover property (p_no_single_cycle_error)
+    $display("[COVER] NO SINGLE ERROR observed");
 
   // ==========================================
   // 5. HSIZE == 3 must return ERROR
@@ -88,7 +93,8 @@ else
     $display("[PASS] HSIZE=3 correctly returns ERROR");
   else
     $error("[FAIL] HSIZE=3 must return ERROR");
-
+  cover property (p_hsize3_error)
+    $display("[COVER] HSIZE=3 ERROR observed");
 	
    property p_htrans_seq_error;
     @(vif.cb_drv iff vif.cb_drv.o_hreadyout)
@@ -102,6 +108,7 @@ else
       $display("[PASS] HTRANS=SEQ correctly returns ERROR");
     else
       $error("[FAIL] HTRANS=SEQ must return ERROR");
-
+    cover property (p_htrans_seq_error)
+      $display("[COVER] HTRANS=SEQ ERROR observed");
 
 endprogram

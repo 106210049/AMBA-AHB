@@ -1,0 +1,296 @@
+
+<html>
+
+<head>
+
+<title>AHB Regression Report</title>
+
+<style>
+
+body {
+    font-family: Arial;
+    margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background: #333;
+    color: white;
+}
+
+.pass {
+    background-color: #c8f7c5;
+}
+
+.fail {
+    background-color: #f7c5c5;
+}
+
+.summary {
+    text-align: center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1 align="center">AHB Regression Report</h1>
+
+<p align="center">
+Generated : 2026-07-25 23:55:56
+</p>
+
+<h2 align="center">Regression Summary</h2>
+
+<table>
+
+<tr>
+<th>Test</th>
+<th>Status</th>
+<th>Writes</th>
+<th>Reads</th>
+<th>SB Errors</th>
+<th>Warnings</th>
+</tr>
+
+<tr class="fail">
+<td>RAND_ADDR_INRANGE</td>
+<td><b>FAIL</b></td>
+<td>20</td>
+<td>13</td>
+<td>5</td>
+<td>0</td>
+</tr>
+
+<tr class="fail">
+<td>TEST_HRESP</td>
+<td><b>FAIL</b></td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr class="fail">
+<td>TEST_RAND_HSIZE</td>
+<td><b>FAIL</b></td>
+<td>3</td>
+<td>15</td>
+<td>3</td>
+<td>0</td>
+</tr>
+
+<tr class="fail">
+<td>TEST_SEQ</td>
+<td><b>FAIL</b></td>
+<td>11</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr class="pass">
+<td>FIXED_ADDR</td>
+<td><b>PASS</b></td>
+<td>5</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr class="pass">
+<td>RAND_ADDR</td>
+<td><b>PASS</b></td>
+<td>5</td>
+<td>14</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr class="pass">
+<td>READ_WAIT_STATE</td>
+<td><b>PASS</b></td>
+<td>7</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr class="pass">
+<td>TEST_BUSY</td>
+<td><b>PASS</b></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr class="pass">
+<td>TEST_IDLE</td>
+<td><b>PASS</b></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr class="pass">
+<td>WRITE_WAIT_STATE</td>
+<td><b>PASS</b></td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+</table>
+
+<h2 align="center">Assertion Analysis</h2>
+
+<table>
+
+<tr>
+<th>Test</th>
+<th>SVA PASS</th>
+<th>SVA FAIL</th>
+<th>SVA WARN</th>
+<th>COVER</th>
+</tr>
+
+<tr class="pass">
+<td>RAND_ADDR_INRANGE</td>
+<td>69</td>
+<td>0</td>
+<td>0</td>
+<td>211</td>
+</tr>
+
+<tr class="fail">
+<td>TEST_HRESP</td>
+<td>25</td>
+<td>25</td>
+<td>0</td>
+<td>79</td>
+</tr>
+
+<tr class="fail">
+<td>TEST_RAND_HSIZE</td>
+<td>49</td>
+<td>18</td>
+<td>0</td>
+<td>151</td>
+</tr>
+
+<tr class="fail">
+<td>TEST_SEQ</td>
+<td>29</td>
+<td>29</td>
+<td>0</td>
+<td>91</td>
+</tr>
+
+<tr class="pass">
+<td>FIXED_ADDR</td>
+<td>29</td>
+<td>0</td>
+<td>0</td>
+<td>91</td>
+</tr>
+
+<tr class="pass">
+<td>RAND_ADDR</td>
+<td>41</td>
+<td>0</td>
+<td>0</td>
+<td>127</td>
+</tr>
+
+<tr class="pass">
+<td>READ_WAIT_STATE</td>
+<td>21</td>
+<td>0</td>
+<td>0</td>
+<td>67</td>
+</tr>
+
+<tr class="pass">
+<td>TEST_BUSY</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>62</td>
+</tr>
+
+<tr class="pass">
+<td>TEST_IDLE</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>62</td>
+</tr>
+
+<tr class="pass">
+<td>WRITE_WAIT_STATE</td>
+<td>18</td>
+<td>0</td>
+<td>0</td>
+<td>58</td>
+</tr>
+
+</table>
+
+<h2 align="center">Failed Assertion Summary</h2>
+
+<table>
+
+<tr>
+<th>Assertion</th>
+<th>Fail Count</th>
+</tr>
+
+<tr class="pass">
+<td colspan="2"><b>No Assertion Failure</b></td>
+</tr>
+
+</table>
+
+<h2 align="center">Overall Statistics</h2>
+
+<table>
+
+<tr>
+<th>Total Tests</th>
+<th>PASS</th>
+<th>FAIL</th>
+<th>Total SVA PASS</th>
+<th>Total SVA FAIL</th>
+<th>Total SVA WARN</th>
+</tr>
+
+<tr>
+<td>10</td>
+<td>6</td>
+<td>4</td>
+<td>281</td>
+<td>72</td>
+<td>0</td>
+</tr>
+
+</table>
+
+</body>
+</html>

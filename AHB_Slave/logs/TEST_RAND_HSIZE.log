@@ -1,5 +1,5 @@
 # vsim -c -coverage -debugDB -sv_seed random -voptargs="+acc" work.ahb_tb_top "+TESTNAME=TEST_RAND_HSIZE" -onfinish final -do "run -all; coverage save -onexit TEST_RAND_HSIZE.ucdb; quit -sim;" 
-# Start time: 17:50:32 on Jul 24,2026
+# Start time: 23:52:40 on Jul 25,2026
 # ** Note: (vsim-8009) Loading existing optimized design _opt2
 # Loading sv_std.std
 # Loading work.testcase_pkg(fast)
@@ -12,240 +12,344 @@
 # Loading work.sva_checker(fast)
 # Loading work.taxi_ahbl_if(fast)
 # ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
-# Sv_Seed = 734549413
+# Sv_Seed = 1444773741
 # run -all
 # [TEST] TESTNAME=TEST_RAND_HSIZE TIMEOUT=1000
-# [AHB_TRANS] WRITE i_hsize=DWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x3bcd46e8
-# [AHB_TRANS] WRITE i_hsize=BYTE i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x77dcf296
-# [AHB_TRANS] WRITE i_hsize=BYTE i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0xc45230ec
-# [AHB_TRANS] WRITE i_hsize=BYTE i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x21d5957d
-# [AHB_TRANS]  READ i_hsize=DWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
-# [AHB_TRANS]  READ i_hsize=DWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
-# [AHB_TRANS]  READ i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
-# [AHB_TRANS]  READ i_hsize=DWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
-# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x611cccd6
 # [AHB_TRANS]  READ i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
 # [AHB_TRANS]  READ i_hsize=BYTE i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
-# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x3ba77e4
-# [AHB_TRANS] WRITE i_hsize=DWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0xe4b49454
+# [AHB_TRANS]  READ i_hsize=HWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
+# [AHB_TRANS]  READ i_hsize=HWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
+# [AHB_TRANS] WRITE i_hsize=BYTE i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x8db16aa5
+# [AHB_TRANS] WRITE i_hsize=DWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x82dc652
+# [AHB_TRANS]  READ i_hsize=DWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
+# [AHB_TRANS]  READ i_hsize=BYTE i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
 # [AHB_TRANS]  READ i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
+# [AHB_TRANS]  READ i_hsize=DWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
+# [AHB_TRANS] WRITE i_hsize=DWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0xf5487301
 # [AHB_TRANS]  READ i_hsize=BYTE i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
-# [AHB_TRANS] WRITE i_hsize=HWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x411e0205
-# [AHB_TRANS] WRITE i_hsize=HWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x81c36584
-# [AHB_TRANS] WRITE i_hsize=BYTE i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0xa3d905a5
+# [AHB_TRANS] WRITE i_hsize=BYTE i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x705dc8b1
+# [AHB_TRANS] WRITE i_hsize=DWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x8d1afef8
+# [AHB_TRANS]  READ i_hsize=DWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
+# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0xdf7a9067
+# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x6583b350
 # [AHB_TRANS]  READ i_hsize=BYTE i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
-# [AHB_TRANS] WRITE i_hsize=WORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x4f8b9df4
+# [AHB_TRANS] WRITE i_hsize=HWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x61a0365e
+# [AHB_TRANS]  READ i_hsize=HWORD i_htrans=NONSEQ i_haddr=0x4 i_hwdata=0x0
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [225000][MON-ADDR] A=0x0 W=0 HSIZE=WORD HTRANS=IDLE
 # [PASS] VALID_RESP OK
-# ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 235 ns Started: 235 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
 # [COVER] OKAY COMPLETE observed
 # [235000][READ][MON-DATA] A=0x0 RDATA=0x0 RESP=0
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [245000][MON-ADDR] A=0x4 W=0 HSIZE=WORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [255000][READ][MON-DATA] A=0x4 RDATA=0x0 RESP=0
+# [255000][SB-PASS ] ADDR=0x00000004 SIZE=WORD EXP=0x00000000 ACT=0x00000000
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [265000][MON-ADDR] A=0x4 W=0 HSIZE=BYTE HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [275000][READ][MON-DATA] A=0x4 RDATA=0x0 RESP=0
+# [275000][SB-PASS ] ADDR=0x00000004 SIZE=BYTE EXP=0x00000000 ACT=0x00000000
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [285000][MON-ADDR] A=0x4 W=0 HSIZE=BYTE HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [295000][READ][MON-DATA] A=0x4 RDATA=0x0 RESP=0
+# [295000][SB-PASS ] ADDR=0x00000004 SIZE=BYTE EXP=0x00000000 ACT=0x00000000
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [305000][MON-ADDR] A=0x4 W=0 HSIZE=HWORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [315000][READ][MON-DATA] A=0x4 RDATA=0x0 RESP=0
+# [315000][SB-PASS ] ADDR=0x00000004 SIZE=HWORD EXP=0x00000000 ACT=0x00000000
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [325000][MON-ADDR] A=0x4 W=0 HSIZE=HWORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [335000][READ][MON-DATA] A=0x4 RDATA=0x0 RESP=0
+# [335000][SB-PASS ] ADDR=0x00000004 SIZE=HWORD EXP=0x00000000 ACT=0x00000000
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [345000][MON-ADDR] A=0x4 W=0 HSIZE=HWORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [355000][READ][MON-DATA] A=0x4 RDATA=0x0 RESP=0
+# [355000][SB-PASS ] ADDR=0x00000004 SIZE=HWORD EXP=0x00000000 ACT=0x00000000
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [365000][MON-ADDR] A=0x4 W=1 HSIZE=BYTE HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [375000][WRITE][MON-DATA] A=0x4 WDATA=0x8db16aa5 RESP=0
+# [375000][SB-WRITE] ADDR=0x00000004 SIZE=BYTE DATA=0x8db16aa5
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 245 ns Started: 245 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+#    Time: 385 ns Started: 385 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [245000][MON-ADDR] A=0x4 W=1 HSIZE=DWORD HTRANS=NONSEQ
+# [COVER] OKAY COMPLETE observed
+# [385000][MON-ADDR] A=0x4 W=1 HSIZE=DWORD HTRANS=NONSEQ
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 255 ns Started: 255 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+#    Time: 395 ns Started: 395 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [255000][WRITE][MON-DATA] A=0x4 WDATA=0x3bcd46e8 RESP=0
-# [PASS] VALID_RESP OK
 # [COVER] OKAY COMPLETE observed
-# [265000][MON-ADDR] A=0x4 W=1 HSIZE=BYTE HTRANS=NONSEQ
+# [395000][WRITE][MON-DATA] A=0x4 WDATA=0x82dc652 RESP=0
 # [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [275000][WRITE][MON-DATA] A=0x4 WDATA=0x77dcf296 RESP=0
-# [275000][SB-WRITE] ADDR=0x00000004 SIZE=BYTE DATA=0x77dcf296
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [285000][MON-ADDR] A=0x4 W=1 HSIZE=BYTE HTRANS=NONSEQ
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [295000][WRITE][MON-DATA] A=0x4 WDATA=0x77dcf296 RESP=0
-# [295000][SB-WRITE] ADDR=0x00000004 SIZE=BYTE DATA=0x77dcf296
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [305000][MON-ADDR] A=0x4 W=1 HSIZE=BYTE HTRANS=NONSEQ
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [315000][WRITE][MON-DATA] A=0x4 WDATA=0xc45230ec RESP=0
-# [315000][SB-WRITE] ADDR=0x00000004 SIZE=BYTE DATA=0xc45230ec
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [325000][MON-ADDR] A=0x4 W=1 HSIZE=BYTE HTRANS=NONSEQ
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [335000][WRITE][MON-DATA] A=0x4 WDATA=0x21d5957d RESP=0
-# [335000][SB-WRITE] ADDR=0x00000004 SIZE=BYTE DATA=0x21d5957d
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [345000][MON-ADDR] A=0x4 W=1 HSIZE=BYTE HTRANS=NONSEQ
-# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 355 ns Started: 355 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+#    Time: 405 ns Started: 405 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [355000][WRITE][MON-DATA] A=0x4 WDATA=0x21d5957d RESP=0
-# [355000][SB-WRITE] ADDR=0x00000004 SIZE=BYTE DATA=0x21d5957d
+# [COVER] OKAY COMPLETE observed
+# [405000][MON-ADDR] A=0x4 W=1 HSIZE=DWORD HTRANS=NONSEQ
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 365 ns Started: 365 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+#    Time: 415 ns Started: 415 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [365000][MON-ADDR] A=0x4 W=0 HSIZE=DWORD HTRANS=NONSEQ
+# [COVER] OKAY COMPLETE observed
+# [415000][WRITE][MON-DATA] A=0x4 WDATA=0x82dc652 RESP=0
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 375 ns Started: 375 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+#    Time: 425 ns Started: 425 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [375000][READ][MON-DATA] A=0x4 RDATA=0x0 RESP=0
-# [375000][SB-PASS ] ADDR=0x00000004 SIZE=DWORD EXP=0x00000000 ACT=0x00000000
+# [COVER] OKAY COMPLETE observed
+# [425000][MON-ADDR] A=0x4 W=0 HSIZE=DWORD HTRANS=NONSEQ
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 385 ns Started: 385 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+#    Time: 435 ns Started: 435 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [385000][MON-ADDR] A=0x4 W=0 HSIZE=DWORD HTRANS=NONSEQ
+# [COVER] OKAY COMPLETE observed
+# [435000][READ][MON-DATA] A=0x4 RDATA=0x0 RESP=0
+# [435000][SB-PASS ] ADDR=0x00000004 SIZE=DWORD EXP=0x00000000 ACT=0x00000000
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [445000][MON-ADDR] A=0x4 W=0 HSIZE=BYTE HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [455000][READ][MON-DATA] A=0x4 RDATA=0x8d000000 RESP=0
+# [455000][SB-PASS ] ADDR=0x00000004 SIZE=BYTE EXP=0x8d000000 ACT=0x8d000000
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [465000][MON-ADDR] A=0x4 W=0 HSIZE=BYTE HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [475000][READ][MON-DATA] A=0x4 RDATA=0x8d000000 RESP=0
+# [475000][SB-PASS ] ADDR=0x00000004 SIZE=BYTE EXP=0x8d000000 ACT=0x8d000000
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [485000][MON-ADDR] A=0x4 W=0 HSIZE=WORD HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [495000][READ][MON-DATA] A=0x4 RDATA=0x8d000000 RESP=0
+# [495000][SB-PASS ] ADDR=0x00000004 SIZE=WORD EXP=0x8d000000 ACT=0x8d000000
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 395 ns Started: 395 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+#    Time: 505 ns Started: 505 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [395000][READ][MON-DATA] A=0x4 RDATA=0x0 RESP=0
-# [395000][SB-PASS ] ADDR=0x00000004 SIZE=DWORD EXP=0x00000000 ACT=0x00000000
+# [COVER] OKAY COMPLETE observed
+# [505000][MON-ADDR] A=0x4 W=0 HSIZE=DWORD HTRANS=NONSEQ
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 405 ns Started: 405 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+#    Time: 515 ns Started: 515 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [405000][MON-ADDR] A=0x4 W=0 HSIZE=DWORD HTRANS=NONSEQ
-# [PASS] VALID_RESP OK
 # [COVER] OKAY COMPLETE observed
-# [415000][READ][MON-DATA] A=0x4 RDATA=0x0 RESP=0
-# [415000][SB-PASS ] ADDR=0x00000004 SIZE=DWORD EXP=0x00000000 ACT=0x00000000
+# [515000][READ][MON-DATA] A=0x4 RDATA=0x8d000000 RESP=0
+# ** Error: [515000][SB-FAIL ] ADDR=0x00000004 SIZE=DWORD EXP=0x00000000 ACT=0x8d000000
+#    Time: 515 ns  Scope: testbench_sv_unit.scoreboard.scoreboard__1.process_one File: ./TB/scoreboard.sv Line: 166
 # [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [425000][MON-ADDR] A=0x4 W=0 HSIZE=WORD HTRANS=NONSEQ
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [435000][READ][MON-DATA] A=0x4 RDATA=0x21000000 RESP=0
-# [435000][SB-PASS ] ADDR=0x00000004 SIZE=WORD EXP=0x21000000 ACT=0x21000000
-# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 445 ns Started: 445 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+#    Time: 525 ns Started: 525 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [445000][MON-ADDR] A=0x4 W=0 HSIZE=DWORD HTRANS=NONSEQ
+# [COVER] OKAY COMPLETE observed
+# [525000][MON-ADDR] A=0x4 W=0 HSIZE=DWORD HTRANS=NONSEQ
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 455 ns Started: 455 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+#    Time: 535 ns Started: 535 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [455000][READ][MON-DATA] A=0x4 RDATA=0x21000000 RESP=0
-# ** Error: [455000][SB-FAIL ] ADDR=0x00000004 SIZE=DWORD EXP=0x00000000 ACT=0x21000000
-#    Time: 455 ns  Scope: testbench_sv_unit.scoreboard.scoreboard__1.process_one File: ./TB/scoreboard.sv Line: 166
+# [COVER] OKAY COMPLETE observed
+# [535000][READ][MON-DATA] A=0x4 RDATA=0x8d000000 RESP=0
+# ** Error: [535000][SB-FAIL ] ADDR=0x00000004 SIZE=DWORD EXP=0x00000000 ACT=0x8d000000
+#    Time: 535 ns  Scope: testbench_sv_unit.scoreboard.scoreboard__1.process_one File: ./TB/scoreboard.sv Line: 166
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 465 ns Started: 465 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+#    Time: 545 ns Started: 545 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [465000][MON-ADDR] A=0x4 W=0 HSIZE=DWORD HTRANS=NONSEQ
-# [PASS] VALID_RESP OK
 # [COVER] OKAY COMPLETE observed
-# [475000][READ][MON-DATA] A=0x4 RDATA=0x21000000 RESP=0
-# ** Error: [475000][SB-FAIL ] ADDR=0x00000004 SIZE=DWORD EXP=0x00000000 ACT=0x21000000
-#    Time: 475 ns  Scope: testbench_sv_unit.scoreboard.scoreboard__1.process_one File: ./TB/scoreboard.sv Line: 166
+# [545000][MON-ADDR] A=0x4 W=1 HSIZE=DWORD HTRANS=NONSEQ
 # [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [485000][MON-ADDR] A=0x4 W=1 HSIZE=WORD HTRANS=NONSEQ
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [495000][WRITE][MON-DATA] A=0x4 WDATA=0x611cccd6 RESP=0
-# [495000][SB-WRITE] ADDR=0x00000004 SIZE=WORD DATA=0x611cccd6
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [505000][MON-ADDR] A=0x4 W=0 HSIZE=WORD HTRANS=NONSEQ
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [515000][READ][MON-DATA] A=0x4 RDATA=0x611cccd6 RESP=0
-# [515000][SB-PASS ] ADDR=0x00000004 SIZE=WORD EXP=0x611cccd6 ACT=0x611cccd6
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [525000][MON-ADDR] A=0x4 W=0 HSIZE=WORD HTRANS=NONSEQ
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [535000][READ][MON-DATA] A=0x4 RDATA=0x611cccd6 RESP=0
-# [535000][SB-PASS ] ADDR=0x00000004 SIZE=WORD EXP=0x611cccd6 ACT=0x611cccd6
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [545000][MON-ADDR] A=0x4 W=0 HSIZE=BYTE HTRANS=NONSEQ
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [555000][READ][MON-DATA] A=0x4 RDATA=0x61000000 RESP=0
-# [555000][SB-PASS ] ADDR=0x00000004 SIZE=BYTE EXP=0x61000000 ACT=0x61000000
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [565000][MON-ADDR] A=0x4 W=1 HSIZE=WORD HTRANS=NONSEQ
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [575000][WRITE][MON-DATA] A=0x4 WDATA=0x3ba77e4 RESP=0
-# [575000][SB-WRITE] ADDR=0x00000004 SIZE=WORD DATA=0x03ba77e4
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [585000][MON-ADDR] A=0x4 W=1 HSIZE=WORD HTRANS=NONSEQ
-# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 595 ns Started: 595 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+#    Time: 555 ns Started: 555 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [595000][WRITE][MON-DATA] A=0x4 WDATA=0x3ba77e4 RESP=0
-# [595000][SB-WRITE] ADDR=0x00000004 SIZE=WORD DATA=0x03ba77e4
+# [COVER] OKAY COMPLETE observed
+# [555000][WRITE][MON-DATA] A=0x4 WDATA=0xf5487301 RESP=0
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [565000][MON-ADDR] A=0x4 W=0 HSIZE=BYTE HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [575000][READ][MON-DATA] A=0x4 RDATA=0x8d000000 RESP=0
+# [575000][SB-PASS ] ADDR=0x00000004 SIZE=BYTE EXP=0x8d000000 ACT=0x8d000000
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [585000][MON-ADDR] A=0x4 W=0 HSIZE=BYTE HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [595000][READ][MON-DATA] A=0x4 RDATA=0x8d000000 RESP=0
+# [595000][SB-PASS ] ADDR=0x00000004 SIZE=BYTE EXP=0x8d000000 ACT=0x8d000000
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [605000][MON-ADDR] A=0x4 W=1 HSIZE=BYTE HTRANS=NONSEQ
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [615000][WRITE][MON-DATA] A=0x4 WDATA=0x705dc8b1 RESP=0
+# [615000][SB-WRITE] ADDR=0x00000004 SIZE=BYTE DATA=0x705dc8b1
+# [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 605 ns Started: 605 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+#    Time: 625 ns Started: 625 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [605000][MON-ADDR] A=0x4 W=1 HSIZE=DWORD HTRANS=NONSEQ
+# [COVER] OKAY COMPLETE observed
+# [625000][MON-ADDR] A=0x4 W=1 HSIZE=DWORD HTRANS=NONSEQ
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # ** Error: [FAIL] HSIZE=3 must return ERROR
-#    Time: 615 ns Started: 615 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 90
+#    Time: 635 ns Started: 635 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [615000][WRITE][MON-DATA] A=0x4 WDATA=0xe4b49454 RESP=0
+# [COVER] OKAY COMPLETE observed
+# [635000][WRITE][MON-DATA] A=0x4 WDATA=0x8d1afef8 RESP=0
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# ** Error: [FAIL] HSIZE=3 must return ERROR
+#    Time: 645 ns Started: 645 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [625000][MON-ADDR] A=0x4 W=0 HSIZE=WORD HTRANS=NONSEQ
+# [COVER] OKAY COMPLETE observed
+# [645000][MON-ADDR] A=0x4 W=1 HSIZE=DWORD HTRANS=NONSEQ
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# ** Error: [FAIL] HSIZE=3 must return ERROR
+#    Time: 655 ns Started: 655 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [635000][READ][MON-DATA] A=0x4 RDATA=0x3ba77e4 RESP=0
-# [635000][SB-PASS ] ADDR=0x00000004 SIZE=WORD EXP=0x03ba77e4 ACT=0x03ba77e4
+# [COVER] OKAY COMPLETE observed
+# [655000][WRITE][MON-DATA] A=0x4 WDATA=0x8d1afef8 RESP=0
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# ** Error: [FAIL] HSIZE=3 must return ERROR
+#    Time: 665 ns Started: 665 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [645000][MON-ADDR] A=0x4 W=0 HSIZE=WORD HTRANS=NONSEQ
+# [COVER] OKAY COMPLETE observed
+# [665000][MON-ADDR] A=0x4 W=0 HSIZE=DWORD HTRANS=NONSEQ
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
+# ** Error: [FAIL] HSIZE=3 must return ERROR
+#    Time: 675 ns Started: 675 ns  Scope: ahb_tb_top.chk.ASSERT_HSIZE3_ERROR File: ./TB/sva_checker.sv Line: 95
 # [COVER] OKAY COMPLETE observed
-# [655000][READ][MON-DATA] A=0x4 RDATA=0x3ba77e4 RESP=0
-# [655000][SB-PASS ] ADDR=0x00000004 SIZE=WORD EXP=0x03ba77e4 ACT=0x03ba77e4
+# [COVER] OKAY COMPLETE observed
+# [675000][READ][MON-DATA] A=0x4 RDATA=0x8d000000 RESP=0
+# ** Error: [675000][SB-FAIL ] ADDR=0x00000004 SIZE=DWORD EXP=0x00000000 ACT=0x8d000000
+#    Time: 675 ns  Scope: testbench_sv_unit.scoreboard.scoreboard__1.process_one File: ./TB/scoreboard.sv Line: 166
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # [COVER] OKAY COMPLETE observed
-# [665000][MON-ADDR] A=0x4 W=0 HSIZE=BYTE HTRANS=NONSEQ
+# [COVER] OKAY COMPLETE observed
+# [685000][MON-ADDR] A=0x4 W=1 HSIZE=WORD HTRANS=NONSEQ
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # [COVER] OKAY COMPLETE observed
-# [675000][READ][MON-DATA] A=0x4 RDATA=0x3000000 RESP=0
-# [675000][SB-PASS ] ADDR=0x00000004 SIZE=BYTE EXP=0x03000000 ACT=0x03000000
+# [COVER] OKAY COMPLETE observed
+# [695000][WRITE][MON-DATA] A=0x4 WDATA=0xdf7a9067 RESP=0
+# [695000][SB-WRITE] ADDR=0x00000004 SIZE=WORD DATA=0xdf7a9067
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # [COVER] OKAY COMPLETE observed
-# [685000][MON-ADDR] A=0x4 W=1 HSIZE=HWORD HTRANS=NONSEQ
+# [COVER] OKAY COMPLETE observed
+# [705000][MON-ADDR] A=0x4 W=1 HSIZE=WORD HTRANS=NONSEQ
 # [PASS] VALID_RESP OK
+# [COVER] VALID_RESP observed
 # [COVER] OKAY COMPLETE observed
-# [695000][WRITE][MON-DATA] A=0x4 WDATA=0x411e0205 RESP=0
-# [695000][SB-WRITE] ADDR=0x00000004 SIZE=HWORD DATA=0x411e0205
-# [PASS] VALID_RESP OK
 # [COVER] OKAY COMPLETE observed
-# [705000][MON-ADDR] A=0x4 W=1 HSIZE=HWORD HTRANS=NONSEQ
-# [PASS] VALID_RESP OK
-# [COVER] OKAY COMPLETE observed
-# [715000][WRITE][MON-DATA] A=0x4 WDATA=0x411e0205 RESP=0
+# [715000][WRITE][MON-DATA] A=0x4 WDATA=0xdf7a9067 RESP=0
 # [TEST] TIMEOUT reached
 # 
 # ================ SCOREBOARD SUMMARY ================
 #   Transactions : 24
-#     Writes     : 9
-#     Reads      : 12
-#   Errors       : 2
-#   Pass Rate    : 91.67%
+#     Writes     : 3
+#     Reads      : 15
+#   Errors       : 3
+#   Pass Rate    : 87.50%
 #   RESULT       : FAIL ❌
 # ===================================================
 # 
@@ -255,11 +359,11 @@
 #  coverage save -onexit TEST_RAND_HSIZE.ucdb
 #  quit -sim
 # Saving coverage database on exit...
-# End time: 17:50:36 on Jul 24,2026, Elapsed time: 0:00:04
-# Errors: 17, Warnings: 0
+# End time: 23:52:45 on Jul 25,2026, Elapsed time: 0:00:05
+# Errors: 21, Warnings: 0
 # 
 # QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-# Start time: 17:50:36 on Jul 24,2026
+# Start time: 23:52:45 on Jul 25,2026
 # vlog -reportprogress 300 "+cover" ./TB/taxi_ahbl_if.sv ./RTL/taxi_ahbl_ram.sv ./TB/testbench.sv 
 # -- Compiling interface taxi_ahbl_if
 # -- Compiling module taxi_ahbl_ram
@@ -274,5 +378,5 @@
 # 
 # Top level modules:
 # 	ahb_tb_top
-# End time: 17:50:36 on Jul 24,2026, Elapsed time: 0:00:00
+# End time: 23:52:45 on Jul 25,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0

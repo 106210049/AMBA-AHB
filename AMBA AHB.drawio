@@ -1408,6 +1408,12 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="Ld3icBF2ITidDijQ-UGh-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_wait" vertex="1">
+          <mxGeometry height="20" width="47.5" x="376.25" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="Ld3icBF2ITidDijQ-UGh-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="i_wait" vertex="1">
+          <mxGeometry height="20" width="47.5" x="408.75" y="130" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

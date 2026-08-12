@@ -1232,7 +1232,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="cuPRJtTQD9liM29h7a7C" name="Slave FSM">
-    <mxGraphModel dx="724" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="852" dy="624" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1355,13 +1355,16 @@
           <mxGeometry height="20" width="37.5" x="660" y="300" as="geometry" />
         </mxCell>
         <mxCell id="nOTFZxlqi9jGSrZyxpmO-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=302;" value="!hwrite &amp;amp; i_wait" vertex="1">
-          <mxGeometry height="20" width="95" x="560" y="280" as="geometry" />
+          <mxGeometry height="20" width="95" x="560" y="275" as="geometry" />
         </mxCell>
         <mxCell id="nOTFZxlqi9jGSrZyxpmO-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=337;" value="&amp;nbsp;hwrite&amp;nbsp;" vertex="1">
           <mxGeometry height="20" width="47.5" x="470" y="275" as="geometry" />
         </mxCell>
         <mxCell id="nOTFZxlqi9jGSrZyxpmO-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=0;" value="&lt;div style=&quot;line-height: 100%;&quot;&gt;htrans = BUSY || i_wait &amp;amp; hwrite&lt;/div&gt;" vertex="1">
           <mxGeometry height="20" width="95" x="560" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="nOTFZxlqi9jGSrZyxpmO-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=60;" value="hwrite &amp;amp; i_wait" vertex="1">
+          <mxGeometry height="20" width="95" x="588" y="350" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

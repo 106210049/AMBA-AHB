@@ -1232,7 +1232,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="cuPRJtTQD9liM29h7a7C" name="Slave FSM">
-    <mxGraphModel dx="1610" dy="763" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1334" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1387,6 +1387,24 @@
               <mxPoint x="780" y="440" />
               <mxPoint x="780" y="490" />
               <mxPoint x="742.4" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ld3icBF2ITidDijQ-UGh-5" edge="1" parent="1" source="EjhQDW_vbU4w0CtPCDvt-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=1;innerLoopWaypoints=1;" target="EjhQDW_vbU4w0CtPCDvt-30">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="171.72" />
+              <mxPoint x="450" y="130" />
+              <mxPoint x="500" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ld3icBF2ITidDijQ-UGh-6" edge="1" parent="1" source="EjhQDW_vbU4w0CtPCDvt-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;curved=1;innerLoopWaypoints=1;" target="EjhQDW_vbU4w0CtPCDvt-36">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="440" />
+              <mxPoint x="420" y="490" />
+              <mxPoint x="457.6" y="490" />
             </Array>
           </mxGeometry>
         </mxCell>

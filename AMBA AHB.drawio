@@ -1424,18 +1424,24 @@
     </mxGraphModel>
   </diagram>
   <diagram id="J_mAmDlrJHvekhBGUwBt" name="Address Decoder">
-    <mxGraphModel dx="1197" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="998" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="J89yP-t3kqQX7D8YYgNo-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="31:12" vertex="1">
-          <mxGeometry height="40" width="240" x="80" y="80" as="geometry" />
+        <mxCell id="J89yP-t3kqQX7D8YYgNo-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="31:12" vertex="1">
+          <mxGeometry height="40" width="240" x="160" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="J89yP-t3kqQX7D8YYgNo-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="11:10" vertex="1">
-          <mxGeometry height="40" width="80" x="320" y="80" as="geometry" />
+        <mxCell id="J89yP-t3kqQX7D8YYgNo-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" value="11:10" vertex="1">
+          <mxGeometry height="40" width="80" x="400" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="J89yP-t3kqQX7D8YYgNo-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="9:0" vertex="1">
-          <mxGeometry height="40" width="160" x="400" y="80" as="geometry" />
+        <mxCell id="J89yP-t3kqQX7D8YYgNo-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="9:0" vertex="1">
+          <mxGeometry height="40" width="160" x="480" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="J89yP-t3kqQX7D8YYgNo-5" parent="1" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;legacyAnchorPoints=0;rotation=-90;" value="" vertex="1">
+          <mxGeometry height="480" width="20" x="390" y="-180" as="geometry" />
+        </mxCell>
+        <mxCell id="J89yP-t3kqQX7D8YYgNo-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;HADDR[31:0]&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="80" x="360" y="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

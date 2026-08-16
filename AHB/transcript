@@ -15,7 +15,39 @@
 # Loading project AHB
 do ahb_run.do
 # QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-# Start time: 22:24:24 on Aug 15,2026
+# Start time: 12:31:02 on Aug 16,2026
+# vlog -reportprogress 300 -sv -f ./RTL/rtl.f ./TB/incr_burst_test.sv 
+# -- Compiling package ahb_pkg
+# -- Compiling package ahb_master_pkg
+# -- Compiling package ahb_slave_pkg
+# -- Compiling interface ahb_if
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_master_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_slave_1_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_1
+# -- Compiling package ahb_slave_2_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_2
+# -- Compiling package ahb_slave_3_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_3
+# ** Error (suppressible): ./RTL/ahb_slave_4.sv(245): (vlog-13163) End label 'ahb_slave_2' does not match module name on line 4.
+# End time: 12:31:02 on Aug 16,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/questasim64_10.7c/win64/vlog failed.
+# Error in macro ./ahb_run.do line 2
+# C:/questasim64_10.7c/win64/vlog failed.
+#     while executing
+# "vlog -sv -f ./RTL/rtl.f ./TB/incr_burst_test.sv"
+do ahb_run.do
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:31:30 on Aug 16,2026
 # vlog -reportprogress 300 -sv -f ./RTL/rtl.f ./TB/incr_burst_test.sv 
 # -- Compiling package ahb_pkg
 # -- Compiling package ahb_master_pkg
@@ -54,12 +86,16 @@ do ahb_run.do
 # 
 # Top level modules:
 # 	ahb_top_tb
-# End time: 22:24:24 on Aug 15,2026, Elapsed time: 0:00:00
+# End time: 12:31:30 on Aug 16,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" -debugDB work.ahb_top_tb 
-# Start time: 22:24:24 on Aug 15,2026
+# Start time: 12:31:30 on Aug 16,2026
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Note: (vsim-8611) Generating debug db.
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_4(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_3(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_1(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_2(fast)".
 # Loading sv_std.std
 # Loading work.ahb_pkg(fast)
 # Loading work.incr_burst_test_sv_unit(fast)
@@ -87,10 +123,9 @@ do ahb_run.do
 add wave -position insertpoint sim:/ahb_top_tb/dut/master_if/*
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Long Hoang  Hostname: MSI  ProcessID: 1064
-#           Attempting to use alternate WLF file "./wlftt50tgr".
+#           Attempting to use alternate WLF file "./wlft1s3zmz".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftt50tgr
-add wave -position insertpoint sim:/ahb_top_tb/dut/u_master/*
+#           Using alternate file: ./wlft1s3zmz
 add wave -position insertpoint sim:/ahb_top_tb/dut/slave1_if/*
 add wave -position insertpoint sim:/ahb_top_tb/dut/slave2_if/*
 add wave -position insertpoint sim:/ahb_top_tb/dut/slave3_if/*
@@ -107,14 +142,14 @@ run
 run
 run
 run
-# ** Note: $finish    : ./TB/incr_burst_test.sv(173)
+# ** Note: $finish    : ./TB/incr_burst_test.sv(179)
 #    Time: 1125 ns  Iteration: 1  Instance: /ahb_top_tb
 # 1
-# Break in Module ahb_top_tb at ./TB/incr_burst_test.sv line 173
+# Break in Module ahb_top_tb at ./TB/incr_burst_test.sv line 179
 run
 do ahb_run.do
 # QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
-# Start time: 22:28:15 on Aug 15,2026
+# Start time: 12:38:37 on Aug 16,2026
 # vlog -reportprogress 300 -sv -f ./RTL/rtl.f ./TB/incr_burst_test.sv 
 # -- Compiling package ahb_pkg
 # -- Compiling package ahb_master_pkg
@@ -153,14 +188,15 @@ do ahb_run.do
 # 
 # Top level modules:
 # 	ahb_top_tb
-# End time: 22:28:15 on Aug 15,2026, Elapsed time: 0:00:00
+# End time: 12:38:37 on Aug 16,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 22:28:22 on Aug 15,2026, Elapsed time: 0:03:58
+# End time: 12:38:38 on Aug 16,2026, Elapsed time: 0:07:08
 # Errors: 0, Warnings: 2
 # vsim -voptargs="+acc" -debugDB work.ahb_top_tb 
-# Start time: 22:28:22 on Aug 15,2026
+# Start time: 12:38:38 on Aug 16,2026
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Note: (vsim-8611) Generating debug db.
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_2(fast)".
 # Loading sv_std.std
 # Loading work.ahb_pkg(fast)
 # Loading work.incr_burst_test_sv_unit(fast)
@@ -188,36 +224,80 @@ do ahb_run.do
 add wave -position insertpoint sim:/ahb_top_tb/dut/master_if/*
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Long Hoang  Hostname: MSI  ProcessID: 1064
-#           Attempting to use alternate WLF file "./wlftw8tzi1".
+#           Attempting to use alternate WLF file "./wlftrbifft".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftw8tzi1
-add wave -position insertpoint sim:/ahb_top_tb/dut/u_master/*
-add wave -position insertpoint sim:/ahb_top_tb/dut/u_slave1/*
-add wave -position insertpoint sim:/ahb_top_tb/dut/u_slave2/*
-add wave -position insertpoint sim:/ahb_top_tb/dut/u_slave3/*
-add wave -position insertpoint sim:/ahb_top_tb/dut/u_slave4/*
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# ** Note: $finish    : ./TB/incr_burst_test.sv(173)
-#    Time: 1125 ns  Iteration: 1  Instance: /ahb_top_tb
-# 1
-# Break in Module ahb_top_tb at ./TB/incr_burst_test.sv line 173
+#           Using alternate file: ./wlftrbifft
 add wave -position insertpoint sim:/ahb_top_tb/dut/slave1_if/*
 add wave -position insertpoint sim:/ahb_top_tb/dut/slave2_if/*
 add wave -position insertpoint sim:/ahb_top_tb/dut/slave3_if/*
 add wave -position insertpoint sim:/ahb_top_tb/dut/slave4_if/*
-restart -f
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $finish    : ./TB/incr_burst_test.sv(179)
+#    Time: 1125 ns  Iteration: 1  Instance: /ahb_top_tb
+# 1
+# Break in Module ahb_top_tb at ./TB/incr_burst_test.sv line 179
+do ahb_run.do
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:41:29 on Aug 16,2026
+# vlog -reportprogress 300 -sv -f ./RTL/rtl.f ./TB/incr_burst_test.sv 
+# -- Compiling package ahb_pkg
+# -- Compiling package ahb_master_pkg
+# -- Compiling package ahb_slave_pkg
+# -- Compiling interface ahb_if
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_master_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_slave_1_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_1
+# -- Compiling package ahb_slave_2_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_2
+# -- Compiling package ahb_slave_3_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_3
+# -- Compiling package ahb_slave_4_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_4
+# -- Compiling package ahb_address_decoder_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_address_decoder
+# -- Compiling module ahb_hrdata_mux
+# -- Compiling package ahb_top_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_top
+# -- Compiling package incr_burst_test_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_top_tb
+# 
+# Top level modules:
+# 	ahb_top_tb
+# End time: 12:41:29 on Aug 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:41:30 on Aug 16,2026, Elapsed time: 0:02:52
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" -debugDB work.ahb_top_tb 
+# Start time: 12:41:30 on Aug 16,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_2(fast)".
+# Loading sv_std.std
 # Loading work.ahb_pkg(fast)
 # Loading work.incr_burst_test_sv_unit(fast)
 # Loading work.ahb_top_tb(fast)
@@ -240,7 +320,17 @@ restart -f
 # Loading work.ahb_slave_4_sv_unit(fast)
 # Loading work.ahb_slave_4(fast)
 # Loading work.ahb_hrdata_mux(fast)
-# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+add wave -position insertpoint sim:/ahb_top_tb/dut/master_if/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Long Hoang  Hostname: MSI  ProcessID: 1064
+#           Attempting to use alternate WLF file "./wlft9hfig1".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9hfig1
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave1_if/*
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave2_if/*
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave3_if/*
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave4_if/*
 run
 run
 run
@@ -253,7 +343,415 @@ run
 run
 run
 run
-# ** Note: $finish    : ./TB/incr_burst_test.sv(173)
+# ** Note: $finish    : ./TB/incr_burst_test.sv(179)
 #    Time: 1125 ns  Iteration: 1  Instance: /ahb_top_tb
 # 1
-# Break in Module ahb_top_tb at ./TB/incr_burst_test.sv line 173
+# Break in Module ahb_top_tb at ./TB/incr_burst_test.sv line 179
+do ahb_run.do
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:47:24 on Aug 16,2026
+# vlog -reportprogress 300 -sv -f ./RTL/rtl.f ./TB/incr_burst_test.sv 
+# -- Compiling package ahb_pkg
+# -- Compiling package ahb_master_pkg
+# -- Compiling package ahb_slave_pkg
+# -- Compiling interface ahb_if
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_master_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_slave_1_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_1
+# -- Compiling package ahb_slave_2_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_2
+# -- Compiling package ahb_slave_3_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_3
+# -- Compiling package ahb_slave_4_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_4
+# -- Compiling package ahb_address_decoder_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_address_decoder
+# -- Compiling module ahb_hrdata_mux
+# -- Compiling package ahb_top_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_top
+# -- Compiling package incr_burst_test_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_top_tb
+# 
+# Top level modules:
+# 	ahb_top_tb
+# End time: 12:47:25 on Aug 16,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 12:47:26 on Aug 16,2026, Elapsed time: 0:05:56
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" -debugDB work.ahb_top_tb 
+# Start time: 12:47:26 on Aug 16,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_2(fast)".
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.incr_burst_test_sv_unit(fast)
+# Loading work.ahb_top_tb(fast)
+# Loading work.ahb_top_sv_unit(fast)
+# Loading work.ahb_top(fast)
+# Loading work.ahb_if(fast)
+# Loading work.ahb_if(fast__1)
+# Loading work.ahb_master_pkg(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+# Loading work.ahb_address_decoder_sv_unit(fast)
+# Loading work.ahb_address_decoder(fast)
+# Loading work.ahb_slave_pkg(fast)
+# Loading work.ahb_slave_1_sv_unit(fast)
+# Loading work.ahb_slave_1(fast)
+# Loading work.ahb_slave_2_sv_unit(fast)
+# Loading work.ahb_slave_2(fast)
+# Loading work.ahb_slave_3_sv_unit(fast)
+# Loading work.ahb_slave_3(fast)
+# Loading work.ahb_slave_4_sv_unit(fast)
+# Loading work.ahb_slave_4(fast)
+# Loading work.ahb_hrdata_mux(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+do ahb_run.do
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:48:02 on Aug 16,2026
+# vlog -reportprogress 300 -sv -f ./RTL/rtl.f ./TB/incr_burst_test.sv 
+# -- Compiling package ahb_pkg
+# -- Compiling package ahb_master_pkg
+# -- Compiling package ahb_slave_pkg
+# -- Compiling interface ahb_if
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_master_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_slave_1_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_1
+# ** Error: ./RTL/ahb_slave_2.sv(1): (vlog-2163) Macro `def is undefined.
+# ** Error: (vlog-13069) ./RTL/ahb_slave_2.sv(2): near "import": syntax error, unexpected "SystemVerilog keyword 'import'".
+# ** Error: ./RTL/ahb_slave_2.sv(1): (vlog-13205) Syntax error found in the scope following 'BIG_EDIAN'. Is there a missing '::'?
+# End time: 12:48:02 on Aug 16,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/questasim64_10.7c/win64/vlog failed.
+# Error in macro ./ahb_run.do line 2
+# C:/questasim64_10.7c/win64/vlog failed.
+#     while executing
+# "vlog -sv -f ./RTL/rtl.f ./TB/incr_burst_test.sv"
+do ahb_run.do
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:48:22 on Aug 16,2026
+# vlog -reportprogress 300 -sv -f ./RTL/rtl.f ./TB/incr_burst_test.sv 
+# -- Compiling package ahb_pkg
+# -- Compiling package ahb_master_pkg
+# -- Compiling package ahb_slave_pkg
+# -- Compiling interface ahb_if
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_master_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_slave_1_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_1
+# -- Compiling package ahb_slave_2_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_2
+# -- Compiling package ahb_slave_3_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_3
+# -- Compiling package ahb_slave_4_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_4
+# -- Compiling package ahb_address_decoder_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_address_decoder
+# -- Compiling module ahb_hrdata_mux
+# -- Compiling package ahb_top_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_top
+# -- Compiling package incr_burst_test_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_top_tb
+# 
+# Top level modules:
+# 	ahb_top_tb
+# End time: 12:48:22 on Aug 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:48:23 on Aug 16,2026, Elapsed time: 0:00:57
+# Errors: 6, Warnings: 0
+# vsim -voptargs="+acc" -debugDB work.ahb_top_tb 
+# Start time: 12:48:23 on Aug 16,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_2(fast)".
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.incr_burst_test_sv_unit(fast)
+# Loading work.ahb_top_tb(fast)
+# Loading work.ahb_top_sv_unit(fast)
+# Loading work.ahb_top(fast)
+# Loading work.ahb_if(fast)
+# Loading work.ahb_if(fast__1)
+# Loading work.ahb_master_pkg(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+# Loading work.ahb_address_decoder_sv_unit(fast)
+# Loading work.ahb_address_decoder(fast)
+# Loading work.ahb_slave_pkg(fast)
+# Loading work.ahb_slave_1_sv_unit(fast)
+# Loading work.ahb_slave_1(fast)
+# Loading work.ahb_slave_2_sv_unit(fast)
+# Loading work.ahb_slave_2(fast)
+# Loading work.ahb_slave_3_sv_unit(fast)
+# Loading work.ahb_slave_3(fast)
+# Loading work.ahb_slave_4_sv_unit(fast)
+# Loading work.ahb_slave_4(fast)
+# Loading work.ahb_hrdata_mux(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+add wave -position insertpoint sim:/ahb_top_tb/dut/master_if/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Long Hoang  Hostname: MSI  ProcessID: 1064
+#           Attempting to use alternate WLF file "./wlft9r1xh4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9r1xh4
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave1_if/*
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave2_if/*
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave3_if/*
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave4_if/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $finish    : ./TB/incr_burst_test.sv(179)
+#    Time: 1125 ns  Iteration: 1  Instance: /ahb_top_tb
+# 1
+# Break in Module ahb_top_tb at ./TB/incr_burst_test.sv line 179
+do ahb_run.do
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:51:19 on Aug 16,2026
+# vlog -reportprogress 300 -sv -f ./RTL/rtl.f ./TB/incr_burst_test.sv 
+# -- Compiling package ahb_pkg
+# -- Compiling package ahb_master_pkg
+# -- Compiling package ahb_slave_pkg
+# -- Compiling interface ahb_if
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_master_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_slave_1_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_1
+# -- Compiling package ahb_slave_2_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_2
+# -- Compiling package ahb_slave_3_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_3
+# -- Compiling package ahb_slave_4_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_4
+# -- Compiling package ahb_address_decoder_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_address_decoder
+# -- Compiling module ahb_hrdata_mux
+# -- Compiling package ahb_top_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_top
+# -- Compiling package incr_burst_test_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_top_tb
+# 
+# Top level modules:
+# 	ahb_top_tb
+# End time: 12:51:19 on Aug 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:51:20 on Aug 16,2026, Elapsed time: 0:02:57
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" -debugDB work.ahb_top_tb 
+# Start time: 12:51:20 on Aug 16,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_3(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_2(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_1(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_4(fast)".
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.incr_burst_test_sv_unit(fast)
+# Loading work.ahb_top_tb(fast)
+# Loading work.ahb_top_sv_unit(fast)
+# Loading work.ahb_top(fast)
+# Loading work.ahb_if(fast)
+# Loading work.ahb_if(fast__1)
+# Loading work.ahb_master_pkg(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+# Loading work.ahb_address_decoder_sv_unit(fast)
+# Loading work.ahb_address_decoder(fast)
+# Loading work.ahb_slave_pkg(fast)
+# Loading work.ahb_slave_1_sv_unit(fast)
+# Loading work.ahb_slave_1(fast)
+# Loading work.ahb_slave_2_sv_unit(fast)
+# Loading work.ahb_slave_2(fast)
+# Loading work.ahb_slave_3_sv_unit(fast)
+# Loading work.ahb_slave_3(fast)
+# Loading work.ahb_slave_4_sv_unit(fast)
+# Loading work.ahb_slave_4(fast)
+# Loading work.ahb_hrdata_mux(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+add wave -position insertpoint sim:/ahb_top_tb/dut/master_if/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Long Hoang  Hostname: MSI  ProcessID: 1064
+#           Attempting to use alternate WLF file "./wlftxtq3h0".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftxtq3h0
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave1_if/*
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave2_if/*
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave3_if/*
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave4_if/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $finish    : ./TB/incr_burst_test.sv(179)
+#    Time: 1125 ns  Iteration: 1  Instance: /ahb_top_tb
+# 1
+# Break in Module ahb_top_tb at ./TB/incr_burst_test.sv line 179
+do ahb_run.do
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:55:16 on Aug 16,2026
+# vlog -reportprogress 300 -sv -f ./RTL/rtl.f ./TB/incr_burst_test.sv 
+# -- Compiling package ahb_pkg
+# -- Compiling package ahb_master_pkg
+# -- Compiling package ahb_slave_pkg
+# -- Compiling interface ahb_if
+# -- Compiling package ahb_master_sv_unit
+# -- Importing package ahb_master_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_master
+# -- Compiling package ahb_slave_1_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_1
+# -- Compiling package ahb_slave_2_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_2
+# -- Compiling package ahb_slave_3_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_3
+# -- Compiling package ahb_slave_4_sv_unit
+# -- Importing package ahb_slave_pkg
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_slave_4
+# -- Compiling package ahb_address_decoder_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_address_decoder
+# -- Compiling module ahb_hrdata_mux
+# -- Compiling package ahb_top_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_top
+# -- Compiling package incr_burst_test_sv_unit
+# -- Importing package ahb_pkg
+# -- Compiling module ahb_top_tb
+# 
+# Top level modules:
+# 	ahb_top_tb
+# End time: 12:55:16 on Aug 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:55:17 on Aug 16,2026, Elapsed time: 0:03:57
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" -debugDB work.ahb_top_tb 
+# Start time: 12:55:17 on Aug 16,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_3(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_2(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_1(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ahb_slave_4(fast)".
+# Loading sv_std.std
+# Loading work.ahb_pkg(fast)
+# Loading work.incr_burst_test_sv_unit(fast)
+# Loading work.ahb_top_tb(fast)
+# Loading work.ahb_top_sv_unit(fast)
+# Loading work.ahb_top(fast)
+# Loading work.ahb_if(fast)
+# Loading work.ahb_if(fast__1)
+# Loading work.ahb_master_pkg(fast)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+# Loading work.ahb_address_decoder_sv_unit(fast)
+# Loading work.ahb_address_decoder(fast)
+# Loading work.ahb_slave_pkg(fast)
+# Loading work.ahb_slave_1_sv_unit(fast)
+# Loading work.ahb_slave_1(fast)
+# Loading work.ahb_slave_2_sv_unit(fast)
+# Loading work.ahb_slave_2(fast)
+# Loading work.ahb_slave_3_sv_unit(fast)
+# Loading work.ahb_slave_3(fast)
+# Loading work.ahb_slave_4_sv_unit(fast)
+# Loading work.ahb_slave_4(fast)
+# Loading work.ahb_hrdata_mux(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+add wave -position insertpoint sim:/ahb_top_tb/dut/master_if/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Long Hoang  Hostname: MSI  ProcessID: 1064
+#           Attempting to use alternate WLF file "./wlft5a8q84".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5a8q84
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave1_if/*
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave2_if/*
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave3_if/*
+add wave -position insertpoint sim:/ahb_top_tb/dut/slave4_if/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $finish    : ./TB/incr_burst_test.sv(179)
+#    Time: 1125 ns  Iteration: 1  Instance: /ahb_top_tb
+# 1
+# Break in Module ahb_top_tb at ./TB/incr_burst_test.sv line 179
+# End time: 12:57:15 on Aug 16,2026, Elapsed time: 0:01:58
+# Errors: 0, Warnings: 2

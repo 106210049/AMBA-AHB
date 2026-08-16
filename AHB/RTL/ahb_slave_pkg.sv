@@ -1,3 +1,4 @@
+`define BIG_EDIAN
 package ahb_slave_pkg;
     typedef enum logic [2:0]    {
         IDLE                = 3'b000,

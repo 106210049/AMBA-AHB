@@ -13,7 +13,6 @@ module ahb_slave_3 #(
     // State register declaration 
     state_t current_state, next_state;
     
-    
     // Address-phase latch registers
     logic [ADDR_WIDTH-1:0]  addr_lat   ;
     logic                   hwrite_lat ;
@@ -27,6 +26,7 @@ module ahb_slave_3 #(
     // Active transfer: NONSEQ or SEQ, slave selected
     logic active_transfer;
     logic write_en;
+    logic ahb_read;
     assign active_transfer = ahb.hsel & (ahb.htrans == ahb_pkg::NONSEQ || ahb.htrans == ahb_pkg::SEQ);
 
     // -------------------------------------------------------------------------
@@ -52,7 +52,7 @@ module ahb_slave_3 #(
             htrans_lat <= ahb_pkg::IDLE         ;
         end
         else if (active_transfer && ahb.hready) begin
-            addr_lat   <= (ahb.haddr - BASE_ADDR) >> $clog2(DATA_WIDTH/8) ;
+            addr_lat   <= (ahb.haddr - BASE_ADDR);
             hwrite_lat <= ahb.hwrite ;
             hsize_lat  <= ahb.hsize  ;
             hburst_lat <= ahb.hburst ;
@@ -125,7 +125,27 @@ module ahb_slave_3 #(
                 mem[k] <= '0;
         end
         else if (active_transfer && write_en && hwrite_lat) begin
-            mem[addr_lat] <= ahb.hwdata;
+            case (hsize_lat)
+                HSIZE_BYTE: begin
+                    `ifdef BIG_EDIAN
+                        mem[addr_lat >> 2][ (3-addr_lat[1:0])*8 +: 8 ] <= ahb.hwdata[7:0];
+                    `else // LITTLE ENDIAN
+                        mem[addr_lat >> 2][ (addr_lat[1:0]*8) +: 8 ]   <= ahb.hwdata[7:0];
+                    `endif
+                end
+
+                HSIZE_HWORD: begin
+                    `ifdef BIG_EDIAN
+                        mem[addr_lat >> 2][ (1-addr_lat[1])*16 +: 16 ] <= ahb.hwdata[15:0];
+                    `else // LITTLE ENDIAN
+                        mem[addr_lat >> 2][ (addr_lat[1]*16) +: 16 ]   <= ahb.hwdata[15:0];
+                    `endif
+                end
+
+                HSIZE_WORD: begin
+                    mem[addr_lat >> 2] <= ahb.hwdata;
+                end
+            endcase
         end
     end
 
@@ -134,53 +154,91 @@ module ahb_slave_3 #(
 
         ahb.hready = 1'b1;
         ahb.hresp  = 1'b0;
-        ahb.hrdata = '0  ;
-
+        // ahb.hrdata = '0  ;
+        ahb_read   = 1'b0;
         case (current_state)
 
             ahb_slave_pkg::IDLE: begin
                 ahb.hready = 1'b1;
                 ahb.hresp  = 1'b0;
-                ahb.hrdata = '0;
+                // ahb.hrdata = '0;
                 write_en   = 1'b0;
+                ahb_read   = 1'b0;
             end
 
             ahb_slave_pkg::WR_READY_PHASE: begin
                 ahb.hready = 1'b1;
                 ahb.hresp  = 1'b0;
-                ahb.hrdata = '0;
+                // ahb.hrdata = '0;
                 write_en   = 1'b1;
+                ahb_read   = 1'b0;
             end
 
             ahb_slave_pkg::WR_WAIT_PHASE: begin
                 ahb.hready = 1'b0;              // stall master
                 ahb.hresp  = 1'b0;
-                ahb.hrdata = '0;
+                // ahb.hrdata = '0;
                 write_en   = 1'b0;
+                ahb_read   = 1'b0;
             end
 
             ahb_slave_pkg::RD_READY_PHASE: begin
                 ahb.hready = (active_transfer) ? 1'b1 : 1'b0 ;
                 ahb.hresp  = 1'b0                            ;
-                ahb.hrdata = mem[addr_lat]                   ;    // drive data using latched address
-                write_en   = 1'b0;
+                // ahb.hrdata = mem[addr_lat]                   ;    // drive data using latched address
+                write_en   = 1'b0 ;
+                ahb_read   = 1'b1 ;
             end
 
             ahb_slave_pkg::RD_WAIT_PHASE: begin
                 ahb.hready = 1'b0 ;                               // stall master while fetching
                 ahb.hresp  = 1'b0 ;
-                ahb.hrdata = '0   ;
-                write_en   = 1'b0;
+                // ahb.hrdata = '0   ;
+                write_en   = 1'b0 ;
+                ahb_read   = 1'b0 ;
             end
 
             default: begin
                 ahb.hready = 1'b1 ;
                 ahb.hresp  = 1'b0 ;
-                ahb.hrdata = '0   ;
-                write_en   = 1'b0;
+                // ahb.hrdata = '0   ;
+                write_en   = 1'b0 ;
+                ahb_read   = 1'b0 ;
             end
 
         endcase
     end
+
+    // Memory read (data phase)
+    always_comb begin
+        if (ahb_read) begin
+            case (hsize_lat)
+                HSIZE_BYTE: begin
+                    `ifdef BIG_EDIAN
+                        ahb.hrdata = {mem[addr_lat >> 2][ (3-addr_lat[1:0])*8 +: 8 ], 24'b0};
+                    `else // LITTLE ENDIAN
+                        ahb.hrdata = { mem[addr_lat >> 2][ (addr_lat[1:0]*8) +: 8 ], 24'b0};
+                    `endif
+                end
+
+                HSIZE_HWORD: begin
+                    `ifdef BIG_EDIAN
+                        ahb.hrdata = {mem[addr_lat >> 2][ (1-addr_lat[1])*16 +: 16 ], 16'b0};
+                    `else // LITTLE ENDIAN
+                        ahb.hrdata = {mem[addr_lat >> 2][ (addr_lat[1]*16) +: 16 ], 16'b0};
+                    `endif
+                end
+
+                HSIZE_WORD: begin
+                    ahb.hrdata = mem[addr_lat >> 2];
+                end
+
+                default: ahb.hrdata = '0;
+            endcase
+        end else begin
+            ahb.hrdata = '0;
+        end
+    end
+
 
 endmodule: ahb_slave_3

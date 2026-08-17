@@ -124,7 +124,7 @@ module ahb_slave_3 #(
             for (int k = 0; k < MEM_DEPTH; k++)
                 mem[k] <= '0;
         end
-        else if (active_transfer && write_en && hwrite_lat) begin
+        else if (active_transfer && write_en && hwrite_lat && ahb.hready) begin
             case (hsize_lat)
                 HSIZE_BYTE: begin
                     `ifdef BIG_EDIAN
@@ -212,7 +212,7 @@ module ahb_slave_3 #(
     // Memory read (data phase)
     always_comb begin
         if (ahb_read) begin
-            case (hsize_lat)
+            case (hsize_lat && ahb.hready)
                 HSIZE_BYTE: begin
                     `ifdef BIG_EDIAN
                         ahb.hrdata = {mem[addr_lat >> 2][ (3-addr_lat[1:0])*8 +: 8 ], 24'b0};

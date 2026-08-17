@@ -124,7 +124,7 @@ module ahb_slave_2 #(
             for (int k = 0; k < MEM_DEPTH; k++)
                 mem[k] <= '0;
         end
-        else if (active_transfer && write_en && hwrite_lat) begin
+        else if (active_transfer && write_en && hwrite_lat && ahb.hready) begin
             case (hsize_lat)
                 HSIZE_BYTE: begin
                     `ifdef BIG_EDIAN
@@ -211,7 +211,7 @@ module ahb_slave_2 #(
 
     // Memory read (data phase)
     always_comb begin
-        if (ahb_read) begin
+        if (ahb_read && ahb.hready) begin
             case (hsize_lat)
                 HSIZE_BYTE: begin
                     `ifdef BIG_EDIAN

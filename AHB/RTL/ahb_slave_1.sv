@@ -28,7 +28,7 @@ module ahb_slave_1 #(
     logic write_en;
     logic ahb_read;
     assign active_transfer = ahb.hsel & (ahb.htrans == ahb_pkg::NONSEQ || ahb.htrans == ahb_pkg::SEQ);
-
+    
     // -------------------------------------------------------------------------
     // State register
     // -------------------------------------------------------------------------
@@ -124,7 +124,7 @@ module ahb_slave_1 #(
             for (int k = 0; k < MEM_DEPTH; k++)
                 mem[k] <= '0;
         end
-        else if (active_transfer && write_en && hwrite_lat) begin
+        else if (active_transfer && write_en && hwrite_lat && ahb.hready) begin
             case (hsize_lat)
                 HSIZE_BYTE: begin
                     `ifdef BIG_EDIAN
@@ -151,11 +151,6 @@ module ahb_slave_1 #(
 
     // Output logic
     always_comb begin : output_logic
-
-        ahb.hready = 1'b1;
-        ahb.hresp  = 1'b0;
-        // ahb.hrdata = '0  ;
-        ahb_read   = 1'b0;
         case (current_state)
 
             ahb_slave_pkg::IDLE: begin
@@ -211,7 +206,7 @@ module ahb_slave_1 #(
 
     // Memory read (data phase)
     always_comb begin
-        if (ahb_read) begin
+        if (ahb_read && ahb.hready) begin
             case (hsize_lat)
                 HSIZE_BYTE: begin
                     `ifdef BIG_EDIAN

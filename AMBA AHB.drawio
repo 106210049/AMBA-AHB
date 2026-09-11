@@ -1232,7 +1232,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="cuPRJtTQD9liM29h7a7C" name="Slave FSM">
-    <mxGraphModel dx="1071" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2394" dy="1106" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1340,7 +1340,7 @@
           <mxGeometry height="30" width="95" x="265" y="230" as="geometry" />
         </mxCell>
         <mxCell id="nOTFZxlqi9jGSrZyxpmO-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=30;" value="! hwrite &amp;amp; i_wait &amp;amp; active_transfer" vertex="1">
-          <mxGeometry height="20" width="95" x="265" y="380" as="geometry" />
+          <mxGeometry height="20" width="95" x="265" y="390" as="geometry" />
         </mxCell>
         <mxCell id="nOTFZxlqi9jGSrZyxpmO-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=0;" value="&lt;div style=&quot;line-height: 100%;&quot;&gt;!hwrite&lt;/div&gt;" vertex="1">
           <mxGeometry height="20" width="37.5" x="670" y="300" as="geometry" />

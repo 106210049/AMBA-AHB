@@ -2044,16 +2044,16 @@
             <mxPoint x="520" y="160" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WJKpbZJ37WVBu1kzr9lN-39" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="0x220" vertex="1">
+        <mxCell id="WJKpbZJ37WVBu1kzr9lN-39" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="640" x="200" y="200" as="geometry" />
         </mxCell>
         <mxCell id="WJKpbZJ37WVBu1kzr9lN-40" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="0x00" vertex="1">
           <mxGeometry height="40" width="120" x="80" y="200" as="geometry" />
         </mxCell>
-        <mxCell id="WJKpbZJ37WVBu1kzr9lN-41" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="0x00" vertex="1">
+        <mxCell id="WJKpbZJ37WVBu1kzr9lN-41" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="280" x="80" y="280" as="geometry" />
         </mxCell>
-        <mxCell id="WJKpbZJ37WVBu1kzr9lN-42" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="9989bff4e" vertex="1">
+        <mxCell id="WJKpbZJ37WVBu1kzr9lN-42" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="480" x="360" y="280" as="geometry" />
         </mxCell>
         <mxCell id="WJKpbZJ37WVBu1kzr9lN-43" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
@@ -2107,7 +2107,7 @@
         <mxCell id="WJKpbZJ37WVBu1kzr9lN-51" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="0x00" vertex="1">
           <mxGeometry height="40" width="600" x="80" y="520" as="geometry" />
         </mxCell>
-        <mxCell id="WJKpbZJ37WVBu1kzr9lN-52" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="ff4e0000&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="WJKpbZJ37WVBu1kzr9lN-52" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="80" x="680" y="520" as="geometry" />
         </mxCell>
         <mxCell id="WJKpbZJ37WVBu1kzr9lN-53" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="0x00" vertex="1">
@@ -2116,13 +2116,13 @@
         <mxCell id="WJKpbZJ37WVBu1kzr9lN-54" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="x" vertex="1">
           <mxGeometry height="40" width="120" x="80" y="360" as="geometry" />
         </mxCell>
-        <mxCell id="WJKpbZJ37WVBu1kzr9lN-55" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;HSIZE_WORD&lt;/div&gt;" vertex="1">
+        <mxCell id="WJKpbZJ37WVBu1kzr9lN-55" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="120" x="80" y="440" as="geometry" />
         </mxCell>
-        <mxCell id="WJKpbZJ37WVBu1kzr9lN-56" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="SINGLE" vertex="1">
+        <mxCell id="WJKpbZJ37WVBu1kzr9lN-56" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="640" x="200" y="360" as="geometry" />
         </mxCell>
-        <mxCell id="WJKpbZJ37WVBu1kzr9lN-57" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;HSIZE_HWORD&lt;/div&gt;" vertex="1">
+        <mxCell id="WJKpbZJ37WVBu1kzr9lN-57" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="640" x="200" y="440" as="geometry" />
         </mxCell>
         <mxCell id="WJKpbZJ37WVBu1kzr9lN-58" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">

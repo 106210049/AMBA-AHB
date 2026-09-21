@@ -1736,6 +1736,15 @@
             <mxPoint x="840" y="120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="mDD4EFif7HsB4pxAJpfA-55" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="" vertex="1">
+          <mxGeometry height="40" width="600" x="80" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="mDD4EFif7HsB4pxAJpfA-56" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="" vertex="1">
+          <mxGeometry height="40" width="80" x="680" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="mDD4EFif7HsB4pxAJpfA-58" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;" value="" vertex="1">
+          <mxGeometry height="40" width="80" x="760" y="520" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

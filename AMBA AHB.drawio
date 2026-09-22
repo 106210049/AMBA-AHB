@@ -5577,7 +5577,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="rRMs3D3AEozJLd1Giw6A" name="INCR16">
-    <mxGraphModel dx="2380" dy="1301" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1686" dy="922" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -6807,6 +6807,9 @@
         </mxCell>
         <mxCell id="2n43GGMyuYr5HA68sJKz-267" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="8" vertex="1">
           <mxGeometry height="40" width="40" x="1640" y="680.4" as="geometry" />
+        </mxCell>
+        <mxCell id="2n43GGMyuYr5HA68sJKz-268" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="HSIZE_BYTE" vertex="1">
+          <mxGeometry height="40" width="1460" x="220" y="600" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

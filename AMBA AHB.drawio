@@ -3638,10 +3638,10 @@
           <mxGeometry height="30" width="60" x="30" y="525" as="geometry" />
         </mxCell>
         <mxCell id="XHSTBeH3evj52LvfoBeU-1" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;HSIZE_WORD&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="120" x="100" y="600" as="geometry" />
+          <mxGeometry height="40" width="60" x="100" y="600" as="geometry" />
         </mxCell>
         <mxCell id="XHSTBeH3evj52LvfoBeU-2" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;HSIZE_WORD&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="620" x="220" y="600" as="geometry" />
+          <mxGeometry height="40" width="680" x="160" y="600" as="geometry" />
         </mxCell>
         <mxCell id="XHSTBeH3evj52LvfoBeU-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="hsize" vertex="1">
           <mxGeometry height="30" width="60" x="30" y="605" as="geometry" />
@@ -3893,7 +3893,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="F86DCqgQwxg4kE4DDSx6" name="INCR4">
-    <mxGraphModel dx="1395" dy="763" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -4620,7 +4620,7 @@
         <mxCell id="_ktsqqwD6rzgULbQrmR1-41" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;0x00&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="120" x="720" y="760" as="geometry" />
         </mxCell>
-        <mxCell id="pxJAkAoAwSV-naAO_XSY-69" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;HSIZE_WORD&lt;/div&gt;" vertex="1">
+        <mxCell id="pxJAkAoAwSV-naAO_XSY-69" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="HSIZE_WORD" vertex="1">
           <mxGeometry height="40" width="60" x="100" y="601" as="geometry" />
         </mxCell>
       </root>
@@ -5577,7 +5577,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="rRMs3D3AEozJLd1Giw6A" name="INCR16">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1686" dy="922" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -6092,7 +6092,7 @@
           <mxGeometry height="30" width="60" x="30" y="525.4" as="geometry" />
         </mxCell>
         <mxCell id="2n43GGMyuYr5HA68sJKz-93" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;HSIZE_WORD&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="120" x="100" y="600.4" as="geometry" />
+          <mxGeometry height="40" width="60" x="100" y="600.4" as="geometry" />
         </mxCell>
         <mxCell id="2n43GGMyuYr5HA68sJKz-95" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="hsize" vertex="1">
           <mxGeometry height="30" width="60" x="30" y="605.4" as="geometry" />
@@ -6809,7 +6809,7 @@
           <mxGeometry height="40" width="40" x="1640" y="680.4" as="geometry" />
         </mxCell>
         <mxCell id="2n43GGMyuYr5HA68sJKz-268" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="HSIZE_BYTE" vertex="1">
-          <mxGeometry height="40" width="1460" x="220" y="600" as="geometry" />
+          <mxGeometry height="40" width="1520" x="160" y="600" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

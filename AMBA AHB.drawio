@@ -4396,10 +4396,7 @@
           <mxGeometry height="40" width="40" x="320" y="441" as="geometry" />
         </mxCell>
         <mxCell id="pxJAkAoAwSV-naAO_XSY-64" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;D&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="40" x="360" y="441" as="geometry" />
-        </mxCell>
-        <mxCell id="pxJAkAoAwSV-naAO_XSY-65" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;E&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="440" x="400" y="441" as="geometry" />
+          <mxGeometry height="40" width="480" x="360" y="441" as="geometry" />
         </mxCell>
         <mxCell id="pxJAkAoAwSV-naAO_XSY-66" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="x" vertex="1">
           <mxGeometry height="40" width="60" x="100" y="521" as="geometry" />

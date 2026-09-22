@@ -1745,7 +1745,7 @@
         <mxCell id="mDD4EFif7HsB4pxAJpfA-58" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x00" vertex="1">
           <mxGeometry height="40" width="80" x="760" y="640" as="geometry" />
         </mxCell>
-        <mxCell id="mDD4EFif7HsB4pxAJpfA-59" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="x" vertex="1">
+        <mxCell id="mDD4EFif7HsB4pxAJpfA-59" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="SINGLE" vertex="1">
           <mxGeometry height="40" width="120" x="80" y="480" as="geometry" />
         </mxCell>
         <mxCell id="mDD4EFif7HsB4pxAJpfA-60" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;HSIZE_WORD&lt;/div&gt;" vertex="1">
@@ -2164,7 +2164,7 @@
         <mxCell id="WJKpbZJ37WVBu1kzr9lN-53" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x00" vertex="1">
           <mxGeometry height="40" width="80" x="760" y="600" as="geometry" />
         </mxCell>
-        <mxCell id="WJKpbZJ37WVBu1kzr9lN-54" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="x" vertex="1">
+        <mxCell id="WJKpbZJ37WVBu1kzr9lN-54" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="SINGLE" vertex="1">
           <mxGeometry height="40" width="120" x="80" y="440" as="geometry" />
         </mxCell>
         <mxCell id="WJKpbZJ37WVBu1kzr9lN-55" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;HSIZE_WORD&lt;/div&gt;" vertex="1">
@@ -2583,7 +2583,7 @@
         <mxCell id="bigh9JJ4Fd17rmE6QqWU-53" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x00" vertex="1">
           <mxGeometry height="40" width="80" x="760" y="640" as="geometry" />
         </mxCell>
-        <mxCell id="bigh9JJ4Fd17rmE6QqWU-54" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="x" vertex="1">
+        <mxCell id="bigh9JJ4Fd17rmE6QqWU-54" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="SINGLE" vertex="1">
           <mxGeometry height="40" width="120" x="80" y="480" as="geometry" />
         </mxCell>
         <mxCell id="bigh9JJ4Fd17rmE6QqWU-55" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;HSIZE_WORD&lt;/div&gt;" vertex="1">
@@ -3002,7 +3002,7 @@
         <mxCell id="1qezHegbq0Txcb-VQBJL-53" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x00" vertex="1">
           <mxGeometry height="40" width="80" x="760" y="600" as="geometry" />
         </mxCell>
-        <mxCell id="1qezHegbq0Txcb-VQBJL-54" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="x" vertex="1">
+        <mxCell id="1qezHegbq0Txcb-VQBJL-54" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="SINGLE" vertex="1">
           <mxGeometry height="40" width="120" x="80" y="440" as="geometry" />
         </mxCell>
         <mxCell id="1qezHegbq0Txcb-VQBJL-55" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;HSIZE_WORD&lt;/div&gt;" vertex="1">
@@ -3628,7 +3628,7 @@
         <mxCell id="uJtHBCynY62ikks9r5FX-7" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;E&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="440" x="400" y="440" as="geometry" />
         </mxCell>
-        <mxCell id="Iw9SGoEnieyIlAAsTMYx-1" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="x" vertex="1">
+        <mxCell id="Iw9SGoEnieyIlAAsTMYx-1" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="SINGLE" vertex="1">
           <mxGeometry height="40" width="60" x="100" y="520" as="geometry" />
         </mxCell>
         <mxCell id="Iw9SGoEnieyIlAAsTMYx-2" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="INCR" vertex="1">
@@ -4398,7 +4398,7 @@
         <mxCell id="pxJAkAoAwSV-naAO_XSY-64" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;D&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="480" x="360" y="441" as="geometry" />
         </mxCell>
-        <mxCell id="pxJAkAoAwSV-naAO_XSY-66" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="x" vertex="1">
+        <mxCell id="pxJAkAoAwSV-naAO_XSY-66" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="SINGLE" vertex="1">
           <mxGeometry height="40" width="60" x="100" y="521" as="geometry" />
         </mxCell>
         <mxCell id="pxJAkAoAwSV-naAO_XSY-67" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="INCR4" vertex="1">
@@ -4407,11 +4407,8 @@
         <mxCell id="pxJAkAoAwSV-naAO_XSY-68" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="i_burst_type" vertex="1">
           <mxGeometry height="30" width="60" x="30" y="526" as="geometry" />
         </mxCell>
-        <mxCell id="pxJAkAoAwSV-naAO_XSY-69" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;HSIZE_WORD&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="120" x="100" y="601" as="geometry" />
-        </mxCell>
         <mxCell id="pxJAkAoAwSV-naAO_XSY-70" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;HSIZE_BYTE&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="620" x="220" y="601" as="geometry" />
+          <mxGeometry height="40" width="680" x="160" y="601" as="geometry" />
         </mxCell>
         <mxCell id="pxJAkAoAwSV-naAO_XSY-71" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="hsize" vertex="1">
           <mxGeometry height="30" width="60" x="30" y="606" as="geometry" />
@@ -4623,11 +4620,14 @@
         <mxCell id="_ktsqqwD6rzgULbQrmR1-41" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;0x00&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="120" x="720" y="760" as="geometry" />
         </mxCell>
+        <mxCell id="pxJAkAoAwSV-naAO_XSY-69" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;HSIZE_WORD&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="60" x="100" y="601" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="5crMbkMXLzSssvGrcB13" name="INCR8">
-    <mxGraphModel dx="2023" dy="1106" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -5141,11 +5141,8 @@
         <mxCell id="b6yPBTMzHWxIy6M3qrZM-92" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="i_burst_type" vertex="1">
           <mxGeometry height="30" width="60" x="30" y="525" as="geometry" />
         </mxCell>
-        <mxCell id="b6yPBTMzHWxIy6M3qrZM-93" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;HSIZE_WORD&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="120" x="100" y="600" as="geometry" />
-        </mxCell>
         <mxCell id="b6yPBTMzHWxIy6M3qrZM-94" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;HSIZE_BYTE&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="900" x="220" y="600" as="geometry" />
+          <mxGeometry height="40" width="960" x="160" y="600" as="geometry" />
         </mxCell>
         <mxCell id="b6yPBTMzHWxIy6M3qrZM-95" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="hsize" vertex="1">
           <mxGeometry height="30" width="60" x="30" y="605" as="geometry" />
@@ -5573,11 +5570,14 @@
         <mxCell id="ABuqL8FsUD4vRfvAnLYP-24" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;0x00&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="80" x="1040" y="761" as="geometry" />
         </mxCell>
+        <mxCell id="b6yPBTMzHWxIy6M3qrZM-93" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;shapeInside=1;fixedSize=1;size=10;fontStyle=1;whiteSpace=wrap;html=1;" value="HSIZE_WORD" vertex="1">
+          <mxGeometry height="40" width="60" x="100" y="600" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="rRMs3D3AEozJLd1Giw6A" name="INCR16">
-    <mxGraphModel dx="1686" dy="922" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />

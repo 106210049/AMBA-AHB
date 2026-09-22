@@ -6095,7 +6095,7 @@
           <mxGeometry height="40" width="120" x="100" y="600.4" as="geometry" />
         </mxCell>
         <mxCell id="2n43GGMyuYr5HA68sJKz-94" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;HSIZE_BYTE&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="900" x="220" y="600.4" as="geometry" />
+          <mxGeometry height="40" width="1460" x="220" y="600.4" as="geometry" />
         </mxCell>
         <mxCell id="2n43GGMyuYr5HA68sJKz-95" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="hsize" vertex="1">
           <mxGeometry height="30" width="60" x="30" y="605.4" as="geometry" />

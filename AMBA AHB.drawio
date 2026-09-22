@@ -5510,6 +5510,9 @@
         <mxCell id="b6yPBTMzHWxIy6M3qrZM-186" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="H" vertex="1">
           <mxGeometry height="40" width="480" x="520" y="440" as="geometry" />
         </mxCell>
+        <mxCell id="6G48BrIsDT71ZupfBcpJ-1" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;0x00&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="40" x="960" y="680" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

@@ -3826,6 +3826,9 @@
         <mxCell id="PjOqbKQqOqrvUhnFH5uu-24" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x760" vertex="1">
           <mxGeometry height="40" width="40" x="800" y="760" as="geometry" />
         </mxCell>
+        <mxCell id="PjOqbKQqOqrvUhnFH5uu-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="haddr" vertex="1">
+          <mxGeometry height="30" width="60" x="30" y="765" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

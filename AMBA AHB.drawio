@@ -4651,7 +4651,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="5crMbkMXLzSssvGrcB13" name="INCR8">
-    <mxGraphModel dx="1686" dy="922" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1395" dy="763" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -5398,9 +5398,6 @@
         </mxCell>
         <mxCell id="b6yPBTMzHWxIy6M3qrZM-145" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x1df" vertex="1">
           <mxGeometry height="40" width="40" x="800" y="760.5" as="geometry" />
-        </mxCell>
-        <mxCell id="b6yPBTMzHWxIy6M3qrZM-146" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;0x00&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="120" x="840" y="760" as="geometry" />
         </mxCell>
         <mxCell id="b6yPBTMzHWxIy6M3qrZM-167" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">

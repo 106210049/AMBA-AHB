@@ -7464,7 +7464,7 @@
         <mxCell id="Mu3zWVbMxMhSFR4bbAiu-91" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="SINGLE" vertex="1">
           <mxGeometry height="40" width="60" x="100" y="520" as="geometry" />
         </mxCell>
-        <mxCell id="Mu3zWVbMxMhSFR4bbAiu-92" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="INCR4" vertex="1">
+        <mxCell id="Mu3zWVbMxMhSFR4bbAiu-92" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="WRAP4&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="680" x="160" y="520" as="geometry" />
         </mxCell>
         <mxCell id="Mu3zWVbMxMhSFR4bbAiu-93" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="i_burst_type" vertex="1">

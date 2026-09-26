@@ -8077,7 +8077,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="QHcOtjeJVgBhQSbDzPj6-82" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x7e4" vertex="1">
-          <mxGeometry height="40" width="760" x="160" y="440.4" as="geometry" />
+          <mxGeometry height="40" width="920" x="160" y="440.4" as="geometry" />
         </mxCell>
         <mxCell id="QHcOtjeJVgBhQSbDzPj6-83" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x00" vertex="1">
           <mxGeometry height="40" width="60" x="100" y="440.4" as="geometry" />
@@ -8106,14 +8106,14 @@
         <mxCell id="QHcOtjeJVgBhQSbDzPj6-91" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="SINGLE" vertex="1">
           <mxGeometry height="40" width="60" x="100" y="600.4" as="geometry" />
         </mxCell>
-        <mxCell id="QHcOtjeJVgBhQSbDzPj6-92" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="WRAP4&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="760" x="160" y="600.4" as="geometry" />
+        <mxCell id="QHcOtjeJVgBhQSbDzPj6-92" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="WRAP8&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="920" x="160" y="600.4" as="geometry" />
         </mxCell>
         <mxCell id="QHcOtjeJVgBhQSbDzPj6-93" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="i_burst_type" vertex="1">
           <mxGeometry height="30" width="60" x="30" y="605.4" as="geometry" />
         </mxCell>
         <mxCell id="QHcOtjeJVgBhQSbDzPj6-94" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;HSIZE_WORD&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="760" x="160" y="680.4" as="geometry" />
+          <mxGeometry height="40" width="920" x="160" y="680.4" as="geometry" />
         </mxCell>
         <mxCell id="QHcOtjeJVgBhQSbDzPj6-95" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="hsize" vertex="1">
           <mxGeometry height="30" width="60" x="30" y="685.4" as="geometry" />
@@ -8443,7 +8443,7 @@
           <mxGeometry height="40" width="40" x="480" y="520" as="geometry" />
         </mxCell>
         <mxCell id="QHcOtjeJVgBhQSbDzPj6-165" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="H" vertex="1">
-          <mxGeometry height="40" width="400" x="520" y="520" as="geometry" />
+          <mxGeometry height="40" width="560" x="520" y="520" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

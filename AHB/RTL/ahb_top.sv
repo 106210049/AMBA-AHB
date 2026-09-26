@@ -1,4 +1,4 @@
-import ahb_pkg::*;
+import ahb_define_pkg::*;
 module ahb_top #(
     parameter DATA_WIDTH = 32,
     parameter ADDR_WIDTH = 32,
@@ -22,7 +22,11 @@ module ahb_top #(
     input logic i_wait_1,
     input logic i_wait_2,
     input logic i_wait_3,
-    input logic i_wait_4
+    input logic i_wait_4,
+
+    output logic                    o_hready,
+    output logic                    o_hresp,
+    output logic [DATA_WIDTH-1:0]   o_hrdata
 );
 
     //------------------------------------------------------
@@ -238,29 +242,40 @@ module ahb_top #(
             2'b00: begin
                 master_if.hready = hready_1;
                 master_if.hresp  = hresp_1;
+                o_hready           = hready_1;
+                o_hresp            = hresp_1;
             end
 
             2'b01: begin
                 master_if.hready = hready_2;
                 master_if.hresp  = hresp_2;
+                o_hready           = hready_2;
+                o_hresp            = hresp_2;
             end
 
             2'b10: begin
                 master_if.hready = hready_3;
                 master_if.hresp  = hresp_3;
+                o_hready           = hready_3;
+                o_hresp            = hresp_3;
             end
 
             2'b11: begin
                 master_if.hready = hready_4;
                 master_if.hresp  = hresp_4;
+                o_hready           = hready_4;
+                o_hresp            = hresp_4;
             end
 
             default: begin
                 master_if.hready = 1'b1;
                 master_if.hresp  = 1'b0;
+                o_hready           = 1'b1;
+                o_hresp            = 1'b0;
             end
 
         endcase
     end
+    assign o_hrdata = master_if.hrdata;
 
 endmodule

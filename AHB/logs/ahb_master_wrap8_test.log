@@ -1,0 +1,874 @@
+#  log -r /*
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/base/uvm_root.svh(370) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+# UVM_INFO @ 0: reporter [RNTST] Running test ahb_master_wrap8_test...
+# UVM_INFO .\TB\tb\ahb_tb.sv(18) @ 0: uvm_test_top.tb [ahb_tb] Testbench Build Phase is being executed !
+# UVM_INFO .\TB\sv\ahb_master_agent.sv(23) @ 0: uvm_test_top.tb.env.master_agent [CFG] Property is_active exists in config DB
+# UVM_INFO .\TB\sv\ahb_master_agent.sv(34) @ 0: uvm_test_top.tb.env.master_agent [ahb_master_agent] AGENT IS ACTIVE !
+# UVM_INFO .\TB\sv\ahb_slave_agent.sv(23) @ 0: uvm_test_top.tb.env.slave_agent [CFG] Property is_active exists in config DB
+# UVM_INFO .\TB\sv\ahb_master_driver.sv(24) @ 0: uvm_test_top.tb.env.master_agent.driver [ahb_master_driver] Driver is connected with interface
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(26) @ 0: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Driver is connected with interface
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(26) @ 0: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Driver is connected with interface
+# UVM_INFO .\TB\tb\ahb_test_lib.sv(25) @ 0: uvm_test_top [ahb_master_wrap8_test] End of Elaboration Phase of Test is being executed!
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# -------------------------------------------------------------------
+# Name                           Type                     Size  Value
+# -------------------------------------------------------------------
+# uvm_test_top                   ahb_master_wrap8_test    -     @452 
+#   tb                           ahb_tb                   -     @471 
+#     env                        ahb_env                  -     @478 
+#       ahb_scb                  ahb_scoreboard           -     @499 
+#         master_imp             uvm_analysis_imp_master  -     @506 
+#           recording_detail     integral                 32    'd1  
+#         slave_imp              uvm_analysis_imp_slave   -     @514 
+#           recording_detail     integral                 32    'd1  
+#         recording_detail       integral                 32    'd1  
+#       master_agent             ahb_master_agent         -     @485 
+#         driver                 ahb_master_driver        -     @555 
+#           rsp_port             uvm_analysis_port        -     @570 
+#             recording_detail   integral                 32    'd1  
+#           seq_item_port        uvm_seq_item_pull_port   -     @562 
+#             recording_detail   integral                 32    'd1  
+#           recording_detail     integral                 32    'd1  
+#         monitor                ahb_master_monitor       -     @538 
+#           item_collected_port  uvm_analysis_port        -     @545 
+#             recording_detail   integral                 32    'd1  
+#           recording_detail     integral                 32    'd1  
+#         sequencer              ahb_master_sequencer     -     @578 
+#           rsp_export           uvm_analysis_export      -     @585 
+#             recording_detail   integral                 32    'd1  
+#           seq_item_export      uvm_seq_item_pull_imp    -     @679 
+#             recording_detail   integral                 32    'd1  
+#           recording_detail     integral                 32    'd1  
+#           arbitration_queue    array                    0     -    
+#           lock_queue           array                    0     -    
+#           num_last_reqs        integral                 32    'd1  
+#           num_last_rsps        integral                 32    'd1  
+#         recording_detail       integral                 32    'd1  
+#       slave_agent              ahb_slave_agent          -     @492 
+#         monitor                ahb_slave_monitor        -     @693 
+#           item_collected_port  uvm_analysis_port        -     @700 
+#             recording_detail   integral                 32    'd1  
+#           recording_detail     integral                 32    'd1  
+#         recording_detail       integral                 32    'd1  
+#       slave_cov                func_cov                 -     @522 
+#         analysis_imp           uvm_analysis_imp         -     @529 
+#           recording_detail     integral                 32    'd1  
+#         recording_detail       integral                 32    'd1  
+#       recording_detail         integral                 32    'd1  
+#     recording_detail           integral                 32    'd1  
+# -------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_master_driver.sv(28) @ 0: uvm_test_top.tb.env.master_agent.driver [ahb_master_driver] start of simulation for uvm_test_top.tb.env.master_agent.driver
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(30) @ 0: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] start of simulation for uvm_test_top.tb.env.master_agent.monitor
+# UVM_INFO .\TB\sv\ahb_master_agent.sv(48) @ 0: uvm_test_top.tb.env.master_agent [ahb_master_agent] start of simulation for uvm_test_top.tb.env.master_agent
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(30) @ 0: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] start of simulation for uvm_test_top.tb.env.slave_agent.monitor
+# UVM_INFO .\TB\sv\ahb_slave_agent.sv(48) @ 0: uvm_test_top.tb.env.slave_agent [ahb_slave_agent] start of simulation for uvm_test_top.tb.env.slave_agent
+# UVM_INFO .\TB\sv\ahb_env.sv(34) @ 0: uvm_test_top.tb.env [ahb_env] start of simulation for uvm_test_top.tb.env
+# UVM_INFO .\TB\tb\ahb_tb.sv(22) @ 0: uvm_test_top.tb [ahb_tb] start of simulation for uvm_test_top.tb
+# UVM_INFO .\TB\tb\ahb_test_lib.sv(34) @ 0: uvm_test_top [ahb_master_wrap8_test] Run Phase of Test is being executed!
+# UVM_INFO .\TB\tb\ahb_test_lib.sv(37) @ 0: uvm_test_top [ahb_master_wrap8_test] Raise objection in run phase
+# UVM_INFO .\TB\tb\ahb_test_lib.sv(39) @ 0: uvm_test_top [ahb_master_wrap8_test] Drop objection in run phase
+# UVM_INFO .\TB\tb\ahb_tb.sv(26) @ 0: uvm_test_top.tb [ahb_tb] Testbench Run Phase is begin executed!
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/seq/uvm_sequencer_base.svh(1390) @ 0: uvm_test_top.tb.env.master_agent.sequencer [PHASESEQ] Starting default sequence 'ahb_master_wrap8_sequences' for phase 'run'
+# UVM_INFO .\TB\sv\ahb_master_driver.sv(32) @ 0: uvm_test_top.tb.env.master_agent.driver [ahb_master_driver] Driver is running
+# UVM_INFO .\TB\sv\ahb_master_sequences.sv(28) @ 0: uvm_test_top.tb.env.master_agent.sequencer@@ahb_master_wrap8_sequences [ahb_master_wrap8_sequences] raise objection
+# UVM_INFO .\TB\sv\ahb_master_sequences.sv(193) @ 0: uvm_test_top.tb.env.master_agent.sequencer@@ahb_master_wrap8_sequences [ahb_master_wrap8_sequences] Executing ahb_master_wrap8_sequences
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/seq/uvm_sequencer_base.svh(1384) @ 0: uvm_test_top.tb.env.master_agent.sequencer [PHASESEQ] No default phase sequence for phase 'pre_reset'
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/seq/uvm_sequencer_base.svh(1384) @ 0: uvm_test_top.tb.env.master_agent.sequencer [PHASESEQ] No default phase sequence for phase 'reset'
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/seq/uvm_sequencer_base.svh(1384) @ 0: uvm_test_top.tb.env.master_agent.sequencer [PHASESEQ] No default phase sequence for phase 'post_reset'
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/seq/uvm_sequencer_base.svh(1384) @ 0: uvm_test_top.tb.env.master_agent.sequencer [PHASESEQ] No default phase sequence for phase 'pre_configure'
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/seq/uvm_sequencer_base.svh(1384) @ 0: uvm_test_top.tb.env.master_agent.sequencer [PHASESEQ] No default phase sequence for phase 'configure'
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/seq/uvm_sequencer_base.svh(1384) @ 0: uvm_test_top.tb.env.master_agent.sequencer [PHASESEQ] No default phase sequence for phase 'post_configure'
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/seq/uvm_sequencer_base.svh(1384) @ 0: uvm_test_top.tb.env.master_agent.sequencer [PHASESEQ] No default phase sequence for phase 'pre_main'
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/seq/uvm_sequencer_base.svh(1384) @ 0: uvm_test_top.tb.env.master_agent.sequencer [PHASESEQ] No default phase sequence for phase 'main'
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/seq/uvm_sequencer_base.svh(1384) @ 0: uvm_test_top.tb.env.master_agent.sequencer [PHASESEQ] No default phase sequence for phase 'post_main'
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/seq/uvm_sequencer_base.svh(1384) @ 0: uvm_test_top.tb.env.master_agent.sequencer [PHASESEQ] No default phase sequence for phase 'pre_shutdown'
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/seq/uvm_sequencer_base.svh(1384) @ 0: uvm_test_top.tb.env.master_agent.sequencer [PHASESEQ] No default phase sequence for phase 'shutdown'
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/seq/uvm_sequencer_base.svh(1384) @ 0: uvm_test_top.tb.env.master_agent.sequencer [PHASESEQ] No default phase sequence for phase 'post_shutdown'
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(37) @ 25: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Detected Reset Done
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(37) @ 25: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Detected Reset Done
+# UVM_INFO .\TB\sv\ahb_master_driver.sv(37) @ 25: uvm_test_top.tb.env.master_agent.driver [ahb_master_driver] Detected Reset Done
+# UVM_INFO .\TB\sv\ahb_master_driver.sv(50) @ 25: uvm_test_top.tb.env.master_agent.driver [ahb_master_driver] Sending Packet :
+# ------------------------------------------------------------------------------------------------------------------------------------
+# Name                           Type                      Size  Value                                                                
+# ------------------------------------------------------------------------------------------------------------------------------------
+# req                            ahb_master_sequence_item  -     @720                                                                 
+#   i_addr                       integral                  32    'h19a                                                                
+#   i_data                       integral                  32    'h9cbe281a                                                           
+#   i_burst_type                 burst_t                   3     WRAP8                                                                
+#   i_data_size                  hsize_t                   3     HSIZE_HWORD                                                          
+#   haddr                        integral                  32    'h0xxxxxxxx                                                          
+#   i_write                      integral                  1     'h0X                                                                 
+#   i_wrap_en                    integral                  1     'h0X                                                                 
+#   i_busy                       integral                  1     'h0X                                                                 
+#   begin_time                   time                      64    25                                                                   
+#   depth                        int                       32    'd2                                                                  
+#   parent sequence (name)       string                    26    ahb_master_wrap8_sequences                                           
+#   parent sequence (full name)  string                    69    uvm_test_top.tb.env.master_agent.sequencer.ahb_master_wrap8_sequences
+#   sequencer                    string                    42    uvm_test_top.tb.env.master_agent.sequencer                           
+# ------------------------------------------------------------------------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# Slave First time Sample
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 65: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @748       
+#   haddr                  integral                 32    'h19a      
+#   hwrite                 integral                 1     'h1        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     NONSEQ     
+#   hwdata                 integral                 32    'h9cbe281a 
+#   hrdata                 integral                 32    'h0        
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# Master First time Sample
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 65: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @752       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe281a 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h19a      
+#   i_write                 integral                  1     'h1        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 75: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @769       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe281b 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h19c      
+#   i_write                 integral                  1     'h1        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 75: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @761       
+#   haddr                  integral                 32    'h19c      
+#   hwrite                 integral                 1     'h1        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe281b 
+#   hrdata                 integral                 32    'h0        
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 85: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @785       
+#   haddr                  integral                 32    'h19e      
+#   hwrite                 integral                 1     'h1        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe281c 
+#   hrdata                 integral                 32    'h0        
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 85: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @777       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe281c 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h19e      
+#   i_write                 integral                  1     'h1        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 95: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @801       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe281d 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h190      
+#   i_write                 integral                  1     'h1        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 95: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @793       
+#   haddr                  integral                 32    'h190      
+#   hwrite                 integral                 1     'h1        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe281d 
+#   hrdata                 integral                 32    'h0        
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 105: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @817       
+#   haddr                  integral                 32    'h192      
+#   hwrite                 integral                 1     'h1        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe281e 
+#   hrdata                 integral                 32    'h0        
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 105: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @809       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe281e 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h192      
+#   i_write                 integral                  1     'h1        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 115: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @833       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe281f 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h194      
+#   i_write                 integral                  1     'h1        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 115: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @825       
+#   haddr                  integral                 32    'h194      
+#   hwrite                 integral                 1     'h1        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe281f 
+#   hrdata                 integral                 32    'h0        
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 125: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @849       
+#   haddr                  integral                 32    'h196      
+#   hwrite                 integral                 1     'h1        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe2820 
+#   hrdata                 integral                 32    'h0        
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 125: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @841       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe2820 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h196      
+#   i_write                 integral                  1     'h1        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 135: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @865       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe2821 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h198      
+#   i_write                 integral                  1     'h1        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 135: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @857       
+#   haddr                  integral                 32    'h198      
+#   hwrite                 integral                 1     'h1        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe2821 
+#   hrdata                 integral                 32    'h0        
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 145: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @881       
+#   haddr                  integral                 32    'h19a      
+#   hwrite                 integral                 1     'h1        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe2821 
+#   hrdata                 integral                 32    'h0        
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 145: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @873       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe2821 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h19a      
+#   i_write                 integral                  1     'h1        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 155: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @897       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe2821 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h19c      
+#   i_write                 integral                  1     'h1        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 155: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @889       
+#   haddr                  integral                 32    'h19c      
+#   hwrite                 integral                 1     'h1        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe2821 
+#   hrdata                 integral                 32    'h0        
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# Slave First time Sample
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 195: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @913       
+#   haddr                  integral                 32    'h19a      
+#   hwrite                 integral                 1     'h0        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe2821 
+#   hrdata                 integral                 32    'h28210000 
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# Master First time Sample
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 195: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @905       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe2821 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h19a      
+#   i_write                 integral                  1     'h0        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 205: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @929       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe2821 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h19c      
+#   i_write                 integral                  1     'h0        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 205: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @921       
+#   haddr                  integral                 32    'h19c      
+#   hwrite                 integral                 1     'h0        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe2821 
+#   hrdata                 integral                 32    'h28210000 
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 215: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @945       
+#   haddr                  integral                 32    'h19e      
+#   hwrite                 integral                 1     'h0        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe2821 
+#   hrdata                 integral                 32    'h281c0000 
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 215: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @937       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe2821 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h19e      
+#   i_write                 integral                  1     'h0        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 225: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @961       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe2821 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h190      
+#   i_write                 integral                  1     'h0        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 225: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @953       
+#   haddr                  integral                 32    'h190      
+#   hwrite                 integral                 1     'h0        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe2821 
+#   hrdata                 integral                 32    'h281d0000 
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 235: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @977       
+#   haddr                  integral                 32    'h192      
+#   hwrite                 integral                 1     'h0        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe2821 
+#   hrdata                 integral                 32    'h281e0000 
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 235: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @969       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe2821 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h192      
+#   i_write                 integral                  1     'h0        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 245: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @993       
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe2821 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h194      
+#   i_write                 integral                  1     'h0        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 245: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @985       
+#   haddr                  integral                 32    'h194      
+#   hwrite                 integral                 1     'h0        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe2821 
+#   hrdata                 integral                 32    'h281f0000 
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 255: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @1009      
+#   haddr                  integral                 32    'h196      
+#   hwrite                 integral                 1     'h0        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe2821 
+#   hrdata                 integral                 32    'h28200000 
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 255: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @1001      
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe2821 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h196      
+#   i_write                 integral                  1     'h0        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(74) @ 265: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Packet Collected :
+# ---------------------------------------------------------------------
+# Name                      Type                      Size  Value      
+# ---------------------------------------------------------------------
+# ahb_master_sequence_item  ahb_master_sequence_item  -     @1025      
+#   i_addr                  integral                  32    'h0        
+#   i_data                  integral                  32    'h9cbe2821 
+#   i_burst_type            burst_t                   3     WRAP8      
+#   i_data_size             hsize_t                   3     HSIZE_HWORD
+#   haddr                   integral                  32    'h198      
+#   i_write                 integral                  1     'h0        
+#   i_wrap_en               integral                  1     'h0X       
+#   i_busy                  integral                  1     'h0X       
+# ---------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(84) @ 265: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Packet Collected :
+# -------------------------------------------------------------------
+# Name                     Type                     Size  Value      
+# -------------------------------------------------------------------
+# ahb_slave_sequence_item  ahb_slave_sequence_item  -     @1017      
+#   haddr                  integral                 32    'h198      
+#   hwrite                 integral                 1     'h0        
+#   hburst                 burst_t                  3     WRAP8      
+#   hsize                  hsize_t                  3     HSIZE_HWORD
+#   htrans                 htrans_t                 2     SEQ        
+#   hwdata                 integral                 32    'h9cbe2821 
+#   hrdata                 integral                 32    'h28210000 
+#   hready                 integral                 1     'h0X       
+#   hresp                  integral                 1     'h0        
+# -------------------------------------------------------------------
+# 
+# UVM_INFO .\TB\sv\ahb_master_sequences.sv(48) @ 265: uvm_test_top.tb.env.master_agent.sequencer@@ahb_master_wrap8_sequences [ahb_master_wrap8_sequences] drop objection
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# [COVER] OKAY COMPLETE observed
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1243) @ 465: reporter [TEST_DONE] All end-of-test objections have been dropped. Calling stop tasks
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 465: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x19a actual=0x19a burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(298) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] WRITE PASS: addr=0x19a data=0x9cbe281a
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x19c actual=0x19c burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(298) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] WRITE PASS: addr=0x19c data=0x9cbe281b
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x19e actual=0x19e burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(298) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] WRITE PASS: addr=0x19e data=0x9cbe281c
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x190 actual=0x190 burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(298) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] WRITE PASS: addr=0x190 data=0x9cbe281d
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x192 actual=0x192 burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(298) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] WRITE PASS: addr=0x192 data=0x9cbe281e
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x194 actual=0x194 burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(298) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] WRITE PASS: addr=0x194 data=0x9cbe281f
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x196 actual=0x196 burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(298) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] WRITE PASS: addr=0x196 data=0x9cbe2820
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x198 actual=0x198 burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(298) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] WRITE PASS: addr=0x198 data=0x9cbe2821
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x19a actual=0x19a burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(298) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] WRITE PASS: addr=0x19a data=0x9cbe2821
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x19c actual=0x19c burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(298) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] WRITE PASS: addr=0x19c data=0x9cbe2821
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x19a actual=0x19a burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(341) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] READ PASS: addr=0x19a exp=0x28210000 act=0x28210000
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x19c actual=0x19c burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(341) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] READ PASS: addr=0x19c exp=0x28210000 act=0x28210000
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x19e actual=0x19e burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(341) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] READ PASS: addr=0x19e exp=0x281c0000 act=0x281c0000
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x190 actual=0x190 burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(341) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] READ PASS: addr=0x190 exp=0x281d0000 act=0x281d0000
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x192 actual=0x192 burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(341) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] READ PASS: addr=0x192 exp=0x281e0000 act=0x281e0000
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x194 actual=0x194 burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(341) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] READ PASS: addr=0x194 exp=0x281f0000 act=0x281f0000
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x196 actual=0x196 burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(341) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] READ PASS: addr=0x196 exp=0x28200000 act=0x28200000
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(271) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_ADDR] ADDR PASS: expected=0x198 actual=0x198 burst=WRAP8 size=HSIZE_HWORD
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(341) @ 465: uvm_test_top.tb.env.ahb_scb [SCOREBOARD_DATA] READ PASS: addr=0x198 exp=0x28210000 act=0x28210000
+# UVM_INFO .\TB\tb\ahb_test_lib.sv(43) @ 465: uvm_test_top [ahb_master_wrap8_test] Check config usage at check phase
+# UVM_INFO .\TB\sv\ahb_scoreboard.sv(366) @ 465: uvm_test_top.tb.env.ahb_scb [ahb_scoreboard] Scoreboard Summary: Total=18 WR=10 RD=8 ERR=0
+# UVM_INFO .\TB\sv\ahb_master_monitor.sv(80) @ 465: uvm_test_top.tb.env.master_agent.monitor [ahb_master_monitor] Report: AHB Master Monitor observed 18 transactions
+# UVM_INFO .\TB\sv\ahb_slave_monitor.sv(90) @ 465: uvm_test_top.tb.env.slave_agent.monitor [ahb_slave_monitor] Report: AHB slave Monitor observed 18 transactions
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  121
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [CFG]     2
+# [NO_DPI_TSTNAME]     1
+# [PHASESEQ]    13
+# [RNTST]     1
+# [SCOREBOARD_ADDR]    18
+# [SCOREBOARD_DATA]    18
+# [TEST_DONE]     2
+# [UVMTOP]     1
+# [ahb_env]     1
+# [ahb_master_agent]     2
+# [ahb_master_driver]     5
+# [ahb_master_monitor]    22
+# [ahb_master_wrap8_sequences]     3
+# [ahb_master_wrap8_test]     5
+# [ahb_scoreboard]     1
+# [ahb_slave_agent]     1
+# [ahb_slave_monitor]    22
+# [ahb_tb]     3
+# ** Note: $finish    : C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 465 ns  Iteration: 54  Instance: /tb_ahb_top
+# Break in Task std/mailbox::get at C:/questasim64_10.7c/win64/../verilog_src/std/std.sv line 41
+#  coverage save -onexit ./cov_out/ahb_master_wrap8_test.ucdb
+#  quit -sim
+# Saving coverage database on exit...
+# End time: 12:44:53 on Sep 26,2026, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 18
+# 
+# vsim -c -coverage -wlf ./wlf_out/ahb_master_wrap16_test.wlf work.tb_ahb_top "+SVSEED=random" "+UVM_TESTNAME=ahb_master_wrap16_test" "+UVM_VERBOSITY=UVM_FULL" "+UVM_TR_RECORD" -onfinish final -do "transcript file ./logs/ahb_master_wrap16_test.log; log -r /*; run -all; coverage save -onexit ./cov_out/ahb_master_wrap16_test.ucdb; quit -sim;" -debugDB 
+# Start time: 12:44:53 on Sep 26,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.ahb_if(fast)
+# Loading work.ahb_slave_pkg(fast)
+# Loading work.ahb_master_pkg(fast)
+# Loading work.ahb_define_pkg(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.ahb_pkg(fast)
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.tb_ahb_top(fast)
+# Loading work.ahb_if_sv_unit(fast)
+# Loading work.ahb_if(fast)
+# Loading work.ahb_top_sv_unit(fast)
+# Loading work.ahb_top(fast)
+# Loading work.ahb_if(fast__1)
+# Loading work.ahb_if(fast__2)
+# Loading work.ahb_if(fast__3)
+# Loading work.ahb_master_sv_unit(fast)
+# Loading work.ahb_master(fast)
+# Loading work.ahb_address_decoder_sv_unit(fast)
+# Loading work.ahb_address_decoder(fast)
+# Loading work.ahb_slave_1_sv_unit(fast)
+# Loading work.ahb_slave_1(fast)
+# Loading work.ahb_slave_2_sv_unit(fast)
+# Loading work.ahb_slave_2(fast)
+# Loading work.ahb_slave_3_sv_unit(fast)
+# Loading work.ahb_slave_3(fast)
+# Loading work.ahb_slave_4_sv_unit(fast)
+# Loading work.ahb_slave_4(fast)
+# Loading work.ahb_hrdata_mux(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'master_if'.  Expected 2, found 0.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_ahb_top/uut/master_if File: ./RTL/ahb_top.sv Line: 35
+# ** Warning: (vsim-3722) ./RTL/ahb_top.sv(35): [TFMPC] - Missing connection for port 'hclk'.
+# ** Warning: (vsim-3722) ./RTL/ahb_top.sv(35): [TFMPC] - Missing connection for port 'hreset_n'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'decoder_if'.  Expected 2, found 0.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_ahb_top/uut/decoder_if File: ./RTL/ahb_top.sv Line: 36
+# ** Warning: (vsim-3722) ./RTL/ahb_top.sv(36): [TFMPC] - Missing connection for port 'hclk'.
+# ** Warning: (vsim-3722) ./RTL/ahb_top.sv(36): [TFMPC] - Missing connection for port 'hreset_n'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'slave1_if'.  Expected 2, found 0.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_ahb_top/uut/slave1_if File: ./RTL/ahb_top.sv Line: 37
+# ** Warning: (vsim-3722) ./RTL/ahb_top.sv(37): [TFMPC] - Missing connection for port 'hclk'.
+# ** Warning: (vsim-3722) ./RTL/ahb_top.sv(37): [TFMPC] - Missing connection for port 'hreset_n'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'slave2_if'.  Expected 2, found 0.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_ahb_top/uut/slave2_if File: ./RTL/ahb_top.sv Line: 38
+# ** Warning: (vsim-3722) ./RTL/ahb_top.sv(38): [TFMPC] - Missing connection for port 'hclk'.
+# ** Warning: (vsim-3722) ./RTL/ahb_top.sv(38): [TFMPC] - Missing connection for port 'hreset_n'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'slave3_if'.  Expected 2, found 0.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_ahb_top/uut/slave3_if File: ./RTL/ahb_top.sv Line: 39
+# ** Warning: (vsim-3722) ./RTL/ahb_top.sv(39): [TFMPC] - Missing connection for port 'hclk'.
+# ** Warning: (vsim-3722) ./RTL/ahb_top.sv(39): [TFMPC] - Missing connection for port 'hreset_n'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'slave4_if'.  Expected 2, found 0.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_ahb_top/uut/slave4_if File: ./RTL/ahb_top.sv Line: 40
+# ** Warning: (vsim-3722) ./RTL/ahb_top.sv(40): [TFMPC] - Missing connection for port 'hclk'.
+# ** Warning: (vsim-3722) ./RTL/ahb_top.sv(40): [TFMPC] - Missing connection for port 'hreset_n'.
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# transcript file ./logs/ahb_master_wrap16_test.log

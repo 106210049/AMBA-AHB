@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-import ahb_pkg::*;
+import ahb_define_pkg::*;
 
 module ahb_top_tb;
 
@@ -130,7 +130,7 @@ module ahb_top_tb;
         i_write = 1;
         i_addr  = 32'h0000_0800;
         i_burst_type = INCR8;
-        i_data_size = HSIZE_HWORD;
+        i_data_size = HSIZE_WORD;
         @(posedge hclk);
         i_enb   = 0;
         @(posedge hclk);
@@ -143,7 +143,7 @@ module ahb_top_tb;
         i_write = 0;
         i_addr  = 32'h0000_0800;
         i_burst_type = INCR8;
-        i_data_size = HSIZE_HWORD;
+        i_data_size = HSIZE_WORD;
         @(posedge hclk);
         i_enb   = 0;
         repeat(8) @(posedge hclk);
@@ -173,7 +173,100 @@ module ahb_top_tb;
         i_enb   = 0;
         repeat(16) @(posedge hclk);
 
-        repeat(20) @(posedge hclk);
+        // WRAP4 WRITE burst
+        repeat(2)@(posedge hclk);
+        i_enb   = 1;
+        i_write = 1;
+        i_wrap_en = 1;
+        i_addr  = 32'h0000_0400;
+        i_burst_type = WRAP4;
+        i_data_size = HSIZE_BYTE;
+        @(posedge hclk);
+        i_enb   = 0;
+        @(posedge hclk);
+        i_data  = 32'hAABBCCDD;
+        repeat(6) @(posedge hclk) i_data = i_data + 1;
+        
+        i_busy  = 1;
+        // repeat(2) @(posedge hclk);
+        @(posedge hclk);
+        i_enb   = 1;
+        i_busy  = 0;
+        i_write = 0;
+        i_wrap_en = 1;
+        i_addr  = 32'h0000_0400;
+        i_burst_type = WRAP4;
+        i_data_size = HSIZE_BYTE;
+        @(posedge hclk);
+        i_enb   = 0;
+        i_wrap_en = 1;
+        repeat(8) @(posedge hclk);
+        i_wrap_en = 0;
+
+        // WRAP8 WRITE burst
+        repeat(2)@(posedge hclk);
+        i_enb   = 1;
+        i_busy  = 1;
+        i_write = 1;
+        i_wrap_en = 1;
+        i_addr  = 32'h0000_0800;
+        i_burst_type = WRAP8;
+        i_data_size = HSIZE_WORD;
+        @(posedge hclk);
+        i_enb   = 0;
+        i_busy  = 0;
+        @(posedge hclk);
+        i_data  = 32'hAABBCCDD;
+        repeat(5) @(posedge hclk) i_data = i_data + 1;
+
+        repeat(2) @(posedge hclk);
+        @(posedge hclk);
+        i_enb   = 1;
+        i_busy  = 1;
+        i_write = 0;
+        i_wrap_en = 1;
+        i_addr  = 32'h0000_0800;
+        i_burst_type = WRAP8;
+        i_data_size = HSIZE_WORD;
+        @(posedge hclk);
+        i_enb   = 0;
+        i_wrap_en = 1;
+        i_busy  = 0;
+        repeat(12) @(posedge hclk);
+        i_wrap_en = 0;
+
+        repeat(2) @(posedge hclk);
+        // WRAP16 WRITE burst
+        @(posedge hclk);
+        i_enb   = 1;
+        i_busy  = 1;
+        i_wrap_en = 1;
+        i_write = 1;
+        i_addr  = 32'h0000_0C00;
+        i_burst_type = WRAP16;
+        i_data_size = HSIZE_WORD;
+        @(posedge hclk);
+        i_enb   = 0;
+        i_busy  = 0;
+        @(posedge hclk);
+        i_data  = 32'hCCCC0001;
+        repeat(16) @(posedge hclk) i_data = i_data + 1;
+
+        repeat(2) @(posedge hclk);
+        @(posedge hclk);
+        i_enb   = 1;
+        i_wrap_en = 1;
+        i_busy  = 1;
+        i_write = 0;
+        i_addr  = 32'h0000_0C00;
+        i_burst_type = WRAP16;
+        i_data_size = HSIZE_WORD;
+        @(posedge hclk);
+        i_enb   = 0;
+        i_busy  = 0;
+        repeat(16) @(posedge hclk);
+        i_wrap_en = 0;
+        repeat(10) @(posedge hclk);
 
         // End simulation
         $finish;

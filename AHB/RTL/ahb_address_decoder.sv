@@ -1,4 +1,4 @@
-import ahb_pkg::*;
+import ahb_define_pkg::*;
 module ahb_address_decoder #(
     parameter ADDR_WIDTH = 32
 )
@@ -15,7 +15,7 @@ module ahb_address_decoder #(
 
 logic transfer_valid;
 logic [1:0] slave_index;
-assign transfer_valid = (ahb.htrans != ahb_pkg::IDLE);
+assign transfer_valid = (ahb.htrans != ahb_define_pkg::IDLE);
 
 assign slave_index    = ahb.haddr[11:10];
 

@@ -1,5 +1,5 @@
 import ahb_slave_pkg::*;
-import ahb_pkg::*;
+import ahb_define_pkg::*;
 module ahb_slave_2 #(
     parameter DATA_WIDTH = 32,
     parameter ADDR_WIDTH = 32,
@@ -27,8 +27,8 @@ module ahb_slave_2 #(
     logic active_transfer;
     logic write_en;
     logic ahb_read;
-    assign active_transfer = ahb.hsel & (ahb.htrans == ahb_pkg::NONSEQ || ahb.htrans == ahb_pkg::SEQ);
-
+    assign active_transfer = ahb.hsel & (ahb.htrans == ahb_define_pkg::NONSEQ || ahb.htrans == ahb_define_pkg::SEQ);
+    
     // -------------------------------------------------------------------------
     // State register
     // -------------------------------------------------------------------------
@@ -47,9 +47,9 @@ module ahb_slave_2 #(
         if (!ahb.hreset_n) begin
             addr_lat   <= '0                    ;
             hwrite_lat <= 1'b0                  ;
-            hsize_lat  <= ahb_pkg::HSIZE_BYTE   ;
-            hburst_lat <= ahb_pkg::SINGLE       ;
-            htrans_lat <= ahb_pkg::IDLE         ;
+            hsize_lat  <= ahb_define_pkg::HSIZE_BYTE   ;
+            hburst_lat <= ahb_define_pkg::SINGLE       ;
+            htrans_lat <= ahb_define_pkg::IDLE         ;
         end
         else if (active_transfer && ahb.hready) begin
             addr_lat   <= (ahb.haddr - BASE_ADDR);
@@ -72,10 +72,16 @@ module ahb_slave_2 #(
                     next_state = i_wait ? ahb_slave_pkg::RD_WAIT_PHASE : ahb_slave_pkg::RD_READY_PHASE        ;
                 else
                     next_state = ahb_slave_pkg::IDLE                                                          ;
+                
+                    ahb.hready = 1'b1;
+                ahb.hresp  = 1'b0;
+                // ahb.hrdata = '0;
+                write_en   = 1'b0;
+                ahb_read   = 1'b0;
             end
 
             ahb_slave_pkg::WR_READY_PHASE: begin
-                if (ahb.htrans == ahb_pkg::BUSY )
+                if (ahb.htrans == ahb_define_pkg::BUSY )
                     next_state = ahb_slave_pkg::WR_WAIT_PHASE ;
                 else if (active_transfer && ahb.hwrite)
                     next_state = i_wait ? ahb_slave_pkg::WR_WAIT_PHASE : ahb_slave_pkg::WR_READY_PHASE       ;   // back-to-back write
@@ -83,17 +89,29 @@ module ahb_slave_2 #(
                     next_state = i_wait ? ahb_slave_pkg::RD_WAIT_PHASE  : ahb_slave_pkg::RD_READY_PHASE      ;    // write → read switch
                 else 
                     next_state = ahb_slave_pkg::IDLE                                                         ;
+                
+                    ahb.hready = 1'b1;
+                ahb.hresp  = 1'b0;
+                // ahb.hrdata = '0;
+                write_en   = 1'b1;
+                ahb_read   = 1'b0;
             end
 
             ahb_slave_pkg::WR_WAIT_PHASE: begin
-                if (i_wait || ahb.htrans == ahb_pkg::BUSY)
+                if (i_wait || ahb.htrans == ahb_define_pkg::BUSY)
                     next_state = ahb_slave_pkg::WR_WAIT_PHASE;
                 else
                     next_state = ahb_slave_pkg::WR_READY_PHASE;
+                
+                ahb.hready = 1'b0;              // stall master
+                ahb.hresp  = 1'b0;
+                // ahb.hrdata = '0;
+                write_en   = 1'b0;
+                ahb_read   = 1'b0;
             end
 
             ahb_slave_pkg::RD_READY_PHASE:  begin
-                if (ahb.htrans == ahb_pkg::BUSY )
+                if (ahb.htrans == ahb_define_pkg::BUSY )
                     next_state = ahb_slave_pkg::RD_WAIT_PHASE ;
                 else if (active_transfer && !ahb.hwrite)
                     next_state = i_wait ? ahb_slave_pkg::RD_WAIT_PHASE  : ahb_slave_pkg::RD_READY_PHASE;    // back-to-back read
@@ -101,17 +119,35 @@ module ahb_slave_2 #(
                     next_state = i_wait ? ahb_slave_pkg::WR_WAIT_PHASE  : ahb_slave_pkg::WR_READY_PHASE;   // read → write switch
                 else
                     next_state = ahb_slave_pkg::IDLE;
+
+                ahb.hready = (active_transfer) ? 1'b1 : 1'b0 ;
+                ahb.hresp  = 1'b0                            ;
+                // ahb.hrdata = mem[addr_lat]                   ;    // drive data using latched address
+                write_en   = 1'b0 ;
+                ahb_read   = 1'b1 ;
             end
 
             ahb_slave_pkg::RD_WAIT_PHASE:   begin
-                if (i_wait || ahb.htrans == ahb_pkg::BUSY)
+                if (i_wait || ahb.htrans == ahb_define_pkg::BUSY)
                     next_state = ahb_slave_pkg::RD_WAIT_PHASE;
                 else
                     next_state = ahb_slave_pkg::RD_READY_PHASE;
+                
+                ahb.hready = 1'b0 ;                               // stall master while fetching
+                ahb.hresp  = 1'b0 ;
+                // ahb.hrdata = '0   ;
+                write_en   = 1'b0 ;
+                ahb_read   = 1'b0 ;
             end
 
-            default:
+            default:    begin
                 next_state = ahb_slave_pkg::IDLE;
+                ahb.hready = 1'b1 ;
+                ahb.hresp  = 1'b0 ;
+                // ahb.hrdata = '0   ;
+                write_en   = 1'b0 ;
+                ahb_read   = 1'b0 ;
+            end
             
         endcase
     end
@@ -150,64 +186,59 @@ module ahb_slave_2 #(
     end
 
     // Output logic
-    always_comb begin : output_logic
+    // always_comb begin : output_logic
+    //     case (current_state)
 
-        ahb.hready = 1'b1;
-        ahb.hresp  = 1'b0;
-        // ahb.hrdata = '0  ;
-        ahb_read   = 1'b0;
-        case (current_state)
+    //         ahb_slave_pkg::IDLE: begin
+    //             ahb.hready = 1'b1;
+    //             ahb.hresp  = 1'b0;
+    //             // ahb.hrdata = '0;
+    //             write_en   = 1'b0;
+    //             ahb_read   = 1'b0;
+    //         end
 
-            ahb_slave_pkg::IDLE: begin
-                ahb.hready = 1'b1;
-                ahb.hresp  = 1'b0;
-                // ahb.hrdata = '0;
-                write_en   = 1'b0;
-                ahb_read   = 1'b0;
-            end
+    //         ahb_slave_pkg::WR_READY_PHASE: begin
+    //             ahb.hready = 1'b1;
+    //             ahb.hresp  = 1'b0;
+    //             // ahb.hrdata = '0;
+    //             write_en   = 1'b1;
+    //             ahb_read   = 1'b0;
+    //         end
 
-            ahb_slave_pkg::WR_READY_PHASE: begin
-                ahb.hready = 1'b1;
-                ahb.hresp  = 1'b0;
-                // ahb.hrdata = '0;
-                write_en   = 1'b1;
-                ahb_read   = 1'b0;
-            end
+    //         ahb_slave_pkg::WR_WAIT_PHASE: begin
+    //             ahb.hready = 1'b0;              // stall master
+    //             ahb.hresp  = 1'b0;
+    //             // ahb.hrdata = '0;
+    //             write_en   = 1'b0;
+    //             ahb_read   = 1'b0;
+    //         end
 
-            ahb_slave_pkg::WR_WAIT_PHASE: begin
-                ahb.hready = 1'b0;              // stall master
-                ahb.hresp  = 1'b0;
-                // ahb.hrdata = '0;
-                write_en   = 1'b0;
-                ahb_read   = 1'b0;
-            end
+    //         ahb_slave_pkg::RD_READY_PHASE: begin
+    //             ahb.hready = (active_transfer) ? 1'b1 : 1'b0 ;
+    //             ahb.hresp  = 1'b0                            ;
+    //             // ahb.hrdata = mem[addr_lat]                   ;    // drive data using latched address
+    //             write_en   = 1'b0 ;
+    //             ahb_read   = 1'b1 ;
+    //         end
 
-            ahb_slave_pkg::RD_READY_PHASE: begin
-                ahb.hready = (active_transfer) ? 1'b1 : 1'b0 ;
-                ahb.hresp  = 1'b0                            ;
-                // ahb.hrdata = mem[addr_lat]                   ;    // drive data using latched address
-                write_en   = 1'b0 ;
-                ahb_read   = 1'b1 ;
-            end
+    //         ahb_slave_pkg::RD_WAIT_PHASE: begin
+    //             ahb.hready = 1'b0 ;                               // stall master while fetching
+    //             ahb.hresp  = 1'b0 ;
+    //             // ahb.hrdata = '0   ;
+    //             write_en   = 1'b0 ;
+    //             ahb_read   = 1'b0 ;
+    //         end
 
-            ahb_slave_pkg::RD_WAIT_PHASE: begin
-                ahb.hready = 1'b0 ;                               // stall master while fetching
-                ahb.hresp  = 1'b0 ;
-                // ahb.hrdata = '0   ;
-                write_en   = 1'b0 ;
-                ahb_read   = 1'b0 ;
-            end
+    //         default: begin
+    //             ahb.hready = 1'b1 ;
+    //             ahb.hresp  = 1'b0 ;
+    //             // ahb.hrdata = '0   ;
+    //             write_en   = 1'b0 ;
+    //             ahb_read   = 1'b0 ;
+    //         end
 
-            default: begin
-                ahb.hready = 1'b1 ;
-                ahb.hresp  = 1'b0 ;
-                // ahb.hrdata = '0   ;
-                write_en   = 1'b0 ;
-                ahb_read   = 1'b0 ;
-            end
-
-        endcase
-    end
+    //     endcase
+    // end
 
     // Memory read (data phase)
     always_comb begin

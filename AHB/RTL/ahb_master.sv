@@ -1,5 +1,5 @@
 import ahb_master_pkg::*;
-import ahb_pkg::*;
+import ahb_define_pkg::*;
 module ahb_master #(
     parameter DATA_WIDTH = 32,
     parameter ADDR_WIDTH = 32
@@ -22,11 +22,13 @@ module ahb_master #(
     logic [4:0]             count                 ;
     logic [4:0]             count_reg             ;
     logic [7:0]             size_bytes            ;
-    logic [4:0]             beat_length           ; 
+    // logic [4:0]             beat_length           ; 
     logic [4:0]             burst_length          ;
     // logic [DATA_WIDTH-1:0]  internal_read_data    ;
+    logic [ADDR_WIDTH-1:0]  wrap_root_addr        ;
     logic [ADDR_WIDTH-1:0]  wrap_base             ;
-    logic [ADDR_WIDTH-1:0]  wrap_boundary         ;
+    // logic [ADDR_WIDTH-1:0]  wrap_boundary         ;
+    logic [ADDR_WIDTH-1:0] wrap_mask              ;
     // logic [ADDR_WIDTH-1:0]  previous_address      ;
     logic [ADDR_WIDTH-1:0]  haddr_reg             ;
     logic [DATA_WIDTH-1:0]  hwdata_reg            ;
@@ -45,7 +47,7 @@ module ahb_master #(
             HSIZE_WORD:     size_bytes = 8'd4;
             HSIZE_DWORD:    size_bytes = 8'd8;
             HSIZE_128BIT:   size_bytes = 8'd16;
-            default:        size_bytes = 8'd1;
+            default:        size_bytes = 8'd4;
         endcase
     end
 
@@ -64,8 +66,8 @@ module ahb_master #(
             count                <= 'b0 ;
             internal_address     <= 'b0 ;
             internal_address_reg <= 'b0 ;
-            wrap_base            <= 'b0 ;
-            wrap_boundary        <= 'b0 ;
+            // wrap_base            <= 'b0 ;
+            // wrap_boundary        <= 'b0 ;
             haddr_reg            <= 'b0 ;
             hwdata_reg           <= 'b0 ;
             hwrite_reg           <= 'b0 ;
@@ -81,6 +83,10 @@ module ahb_master #(
             htrans_reg <= ahb.htrans ;
             hburst_reg <= ahb.hburst ;
             count_reg  <= count      ;
+            // if(i_wrap_en)   
+            //     wrap_base <= wrap_root_addr & (~wrap_mask);
+            // else    
+            //     wrap_base <= '0;
         end
     end
 
@@ -105,17 +111,46 @@ module ahb_master #(
         end
     end
 
-    always_comb begin
-        case(i_data_size)
-            HSIZE_BYTE:            beat_length = 5'd1;
-            HSIZE_HWORD:           beat_length = 5'd2;
-            HSIZE_WORD:            beat_length = 5'd4;
-            HSIZE_DWORD:           beat_length = 5'd8;
-            HSIZE_128BIT:          beat_length = 5'd16;
-            default:               beat_length = 5'd4;
-        endcase
-    end
+    // always_comb begin
+    //     case(i_data_size)
+    //         HSIZE_BYTE:            beat_length = 5'd1;
+    //         HSIZE_HWORD:           beat_length = 5'd2;
+    //         HSIZE_WORD:            beat_length = 5'd4;
+    //         HSIZE_DWORD:           beat_length = 5'd8;
+    //         HSIZE_128BIT:          beat_length = 5'd16;
+    //         default:               beat_length = 5'd4;
+    //     endcase
+    // end
 
+    
+    always_comb begin
+        if(i_wrap_en)   begin
+            case(i_burst_type)
+                WRAP4:  begin
+                    wrap_mask = (size_bytes << 2) - 1;
+                end
+                WRAP8:  begin
+                    wrap_mask = (size_bytes << 3) - 1;
+                end
+                WRAP16: begin
+                    wrap_mask = (size_bytes << 4) - 1;
+                end
+                default: wrap_mask = '0;
+            endcase
+        end
+        else    begin
+            wrap_mask = 0;
+        end
+    end
+    // logic [ADDR_WIDTH-1:0] wrap_base;
+    // assign wrap_base = internal_address & (~wrap_mask);
+    always_comb begin
+        if(i_wrap_en)   
+            wrap_base = wrap_root_addr & (~wrap_mask);
+        else    
+            wrap_base = '0;
+    end
+ 
     always_ff @(posedge ahb.hclk or negedge ahb.hreset_n) begin
         if(!ahb.hreset_n)   begin
             count <= '0;
@@ -124,10 +159,18 @@ module ahb_master #(
         else begin  
             if(load_addr)   begin
                 internal_address <= i_addr;
+                if(i_wrap_en)
+                    wrap_root_addr <= i_addr;
+                else    
+                    wrap_root_addr <= '0;
                 count <= '0;
             end
-            else if(ahb.hready && !i_wrap_en && i_burst_type != ahb_pkg::SINGLE)  begin
-                internal_address <= internal_address + beat_length;
+            else if(ahb.hready && !i_wrap_en && i_burst_type != ahb_define_pkg::SINGLE)  begin
+                internal_address <= internal_address + size_bytes;
+                count <= count + 1'b1;
+            end
+            else if(ahb.hready && i_wrap_en)    begin
+                internal_address <= wrap_base | ((internal_address + size_bytes) & wrap_mask);
                 count <= count + 1'b1;
             end
         end
@@ -145,10 +188,29 @@ module ahb_master #(
                     next_state = RD_ADDR_PHASE;
                 else
                     next_state = ahb_master_pkg::IDLE;
+                ahb.haddr  = '0                    ;
+                ahb.hwdata = 'b0                   ;
+                ahb.hwrite = 1'b0                  ;
+                ahb.htrans = ahb_define_pkg::IDLE         ;   // IDLE
+                ahb.hsize  = i_data_size           ;
+                // Control signal for load address
+                load_addr  = 1'b1                  ;
+                busy_flag  = 1'b0                  ;
             end
 
             WR_ADDR_PHASE:  begin
-                next_state = WR_DATA_PHASE;
+                if(i_busy)  
+                    next_state = WAIT_PHASE;
+                else
+                    next_state = WR_DATA_PHASE;
+                ahb.haddr  = ahb.hready ? i_addr : haddr_reg ;
+                ahb.hwrite = 1'b1                  ;
+                ahb.htrans = ahb_define_pkg::NONSEQ       ;   // NONSEQUENTIAL
+                ahb.hsize  = i_data_size           ;
+                ahb.hburst = i_burst_type          ;
+                // Control signal for load address
+                load_addr  = 1'b0                  ;
+                busy_flag  = 1'b0                  ;
             end
 
             WR_DATA_PHASE:  begin
@@ -166,10 +228,39 @@ module ahb_master #(
                     next_state = RD_ADDR_PHASE;
                 else
                     next_state = WR_DATA_PHASE;
+
+                ahb.hwrite = 1'b1         ;
+                ahb.hsize  = i_data_size  ;
+                // Control signal for load address
+                load_addr  = 1'b0         ;
+                busy_flag  = 1'b0         ;
+                if(ahb.hburst == SINGLE)  begin
+                    ahb.hwdata = i_data                               ;
+                    ahb.haddr  = ahb.hready ? i_addr : haddr_reg      ;
+                    ahb.htrans = ahb_define_pkg::NONSEQ                      ;             // NONSEQUENTIAL
+                    ahb.hburst = i_burst_type                         ;
+                end
+                else    begin
+                    ahb.hwdata = i_data                        ;
+                    ahb.haddr  = internal_address              ;
+                    ahb.htrans = ahb_define_pkg::SEQ                  ;             // SEQUENTIAL
+                    ahb.hburst = i_burst_type                  ;
+                end
             end
 
             RD_ADDR_PHASE:  begin
-                next_state = RD_DATA_PHASE;
+                if(i_busy)  
+                    next_state = WAIT_PHASE;
+                else
+                    next_state = RD_DATA_PHASE;
+                ahb.haddr  = ahb.hready ? i_addr : haddr_reg ;
+                ahb.hwrite = 1'b0                          ;
+                ahb.htrans = ahb_define_pkg::NONSEQ        ;           // NONSEQUENTIAL
+                ahb.hsize  = i_data_size                   ;
+                ahb.hburst = i_burst_type                  ;
+                // Control signal for load address
+                load_addr  = 1'b0                          ;
+                busy_flag  = 1'b0                          ;
             end
 
             RD_DATA_PHASE:  begin
@@ -177,7 +268,7 @@ module ahb_master #(
                     next_state = WAIT_PHASE;
                 else if(i_burst_type == SINGLE && ahb.hready)   
                     next_state = ahb_master_pkg::IDLE;
-                else if(i_burst_type == INCR || i_burst_type == INCR4 || i_burst_type == INCR8 || i_burst_type == INCR16)   begin
+                else if(i_burst_type == INCR4 || i_burst_type == INCR8 || i_burst_type == INCR16)   begin
                     if(count == burst_length)  
                         next_state = ahb_master_pkg::IDLE;
                     else 
@@ -187,6 +278,22 @@ module ahb_master #(
                     next_state = WR_ADDR_PHASE;
                 else
                     next_state = RD_DATA_PHASE;
+
+                ahb.hwrite = 1'b0         ;
+                ahb.hsize  = i_data_size  ;
+                // Control signal for load address
+                load_addr  = 1'b0         ;
+                busy_flag  = 1'b0         ;
+                if(ahb.hburst == SINGLE)    begin
+                    ahb.haddr  = ahb.hready ? i_addr : haddr_reg  ;   
+                    ahb.htrans = ahb_define_pkg::NONSEQ                  ;   // NONSEQUENTIAL
+                    ahb.hburst = i_burst_type                     ;
+                end
+                else begin
+                    ahb.haddr  = internal_address          ;
+                    ahb.htrans = ahb_define_pkg::SEQ              ;   // SEQUENTIAL
+                    ahb.hburst = i_burst_type              ;
+                end
             end
 
             WAIT_PHASE:     begin
@@ -196,97 +303,25 @@ module ahb_master #(
                     next_state = WR_DATA_PHASE;
                 else 
                     next_state = RD_DATA_PHASE;
-            end
 
-            default: next_state = ahb_master_pkg::IDLE;
-        endcase
-    end
-
-    always_comb begin
-        case(current_state)
-            ahb_master_pkg::IDLE:   begin
-                ahb.haddr  = '0                    ;
-                ahb.hwdata = 'b0                   ;
-                ahb.hwrite = 1'b0                  ;
-                ahb.htrans = ahb_pkg::IDLE         ;   // IDLE
-                ahb.hsize  = i_data_size           ;
-                // Control signal for load address
-                load_addr  = 1'b1                  ;
-                busy_flag  = 1'b0                  ;
-            end
-            WR_ADDR_PHASE:  begin
-                ahb.haddr  = ahb.hready ? i_addr : haddr_reg ;
-                ahb.hwrite = 1'b1                  ;
-                ahb.htrans = ahb_pkg::NONSEQ       ;   // NONSEQUENTIAL
-                ahb.hsize  = i_data_size           ;
-                ahb.hburst = i_burst_type          ;
-                // Control signal for load address
-                load_addr  = 1'b0                  ;
-                busy_flag  = 1'b0                  ;
-            end
-            WR_DATA_PHASE:  begin
-                ahb.hwrite = 1'b1         ;
-                ahb.hsize  = i_data_size  ;
-                // Control signal for load address
-                load_addr  = 1'b0         ;
-                busy_flag  = 1'b0         ;
-                if(ahb.hburst == SINGLE)  begin
-                    ahb.hwdata = i_data                               ;
-                    ahb.haddr  = ahb.hready ? i_addr : haddr_reg      ;
-                    ahb.htrans = ahb_pkg::NONSEQ                      ;             // NONSEQUENTIAL
-                    ahb.hburst = i_burst_type                         ;
-                end
-                else    begin
-                    ahb.hwdata = i_data                        ;
-                    ahb.haddr  = internal_address              ;
-                    ahb.htrans = ahb_pkg::SEQ                  ;             // SEQUENTIAL
-                    ahb.hburst = i_burst_type                  ;
-                end
-            end
-            RD_ADDR_PHASE:  begin
-                ahb.haddr  = ahb.hready ? i_addr : haddr_reg ;
-                ahb.hwrite = 1'b0                          ;
-                ahb.htrans = ahb_pkg::NONSEQ               ;           // NONSEQUENTIAL
-                ahb.hsize  = i_data_size                   ;
-                ahb.hburst = i_burst_type                  ;
-                // Control signal for load address
-                load_addr  = 1'b0                          ;
-                busy_flag  = 1'b0                          ;
-            end
-            RD_DATA_PHASE:  begin
-                ahb.hwrite = 1'b0         ;
-                ahb.hsize  = i_data_size  ;
-                // Control signal for load address
-                load_addr  = 1'b0         ;
-                busy_flag  = 1'b0         ;
-                if(ahb.hburst == SINGLE)    begin
-                    ahb.haddr  = ahb.hready ? i_addr : haddr_reg  ;   
-                    ahb.htrans = ahb_pkg::NONSEQ                  ;   // NONSEQUENTIAL
-                    ahb.hburst = i_burst_type                     ;
-                end
-                else begin
-                    ahb.haddr  = internal_address          ;
-                    ahb.htrans = ahb_pkg::SEQ              ;   // SEQUENTIAL
-                    ahb.hburst = i_burst_type              ;
-                end
-            end
-            WAIT_PHASE: begin
                 ahb.haddr  = haddr_reg               ;
                 ahb.hwdata = hwdata_reg              ;
                 ahb.hwrite = hwrite_reg              ;
                 ahb.hsize  = hsize_reg               ;
-                ahb.htrans = ahb_pkg::BUSY           ;   // BUSY
+                ahb.htrans = ahb_define_pkg::BUSY           ;   // BUSY
                 ahb.hburst = hburst_reg              ;
                 // Control signal for load address
-                load_addr  = 1'b0                    ;
+                load_addr  = 1'b1                    ;
                 busy_flag  = 1'b1                    ;
             end
-            default:    begin
+
+            default: begin
+                next_state = ahb_master_pkg::IDLE;
                 ahb.haddr  = i_addr         ;
                 ahb.hwdata = 'b0            ;
                 ahb.hwrite = 1'b0           ;
                 ahb.hsize  = i_data_size    ;
-                ahb.htrans = ahb_pkg::IDLE  ;
+                ahb.htrans = ahb_define_pkg::IDLE  ;
                 ahb.hburst = SINGLE         ;
                 // Control signal for load address
                 load_addr  = 1'b0           ;
@@ -294,5 +329,98 @@ module ahb_master #(
             end
         endcase
     end
+
+    // always_comb begin
+    //     case(current_state)
+    //         ahb_master_pkg::IDLE:   begin
+    //             ahb.haddr  = '0                    ;
+    //             ahb.hwdata = 'b0                   ;
+    //             ahb.hwrite = 1'b0                  ;
+    //             ahb.htrans = ahb_define_pkg::IDLE         ;   // IDLE
+    //             ahb.hsize  = i_data_size           ;
+    //             // Control signal for load address
+    //             load_addr  = 1'b1                  ;
+    //             busy_flag  = 1'b0                  ;
+    //         end
+    //         WR_ADDR_PHASE:  begin
+    //             ahb.haddr  = ahb.hready ? i_addr : haddr_reg ;
+    //             ahb.hwrite = 1'b1                  ;
+    //             ahb.htrans = ahb_define_pkg::NONSEQ       ;   // NONSEQUENTIAL
+    //             ahb.hsize  = i_data_size           ;
+    //             ahb.hburst = i_burst_type          ;
+    //             // Control signal for load address
+    //             load_addr  = 1'b0                  ;
+    //             busy_flag  = 1'b0                  ;
+    //         end
+    //         WR_DATA_PHASE:  begin
+    //             ahb.hwrite = 1'b1         ;
+    //             ahb.hsize  = i_data_size  ;
+    //             // Control signal for load address
+    //             load_addr  = 1'b0         ;
+    //             busy_flag  = 1'b0         ;
+    //             if(ahb.hburst == SINGLE)  begin
+    //                 ahb.hwdata = i_data                               ;
+    //                 ahb.haddr  = ahb.hready ? i_addr : haddr_reg      ;
+    //                 ahb.htrans = ahb_define_pkg::NONSEQ                      ;             // NONSEQUENTIAL
+    //                 ahb.hburst = i_burst_type                         ;
+    //             end
+    //             else    begin
+    //                 ahb.hwdata = i_data                        ;
+    //                 ahb.haddr  = internal_address              ;
+    //                 ahb.htrans = ahb_define_pkg::SEQ                  ;             // SEQUENTIAL
+    //                 ahb.hburst = i_burst_type                  ;
+    //             end
+    //         end
+    //         RD_ADDR_PHASE:  begin
+    //             ahb.haddr  = ahb.hready ? i_addr : haddr_reg ;
+    //             ahb.hwrite = 1'b0                          ;
+    //             ahb.htrans = ahb_define_pkg::NONSEQ               ;           // NONSEQUENTIAL
+    //             ahb.hsize  = i_data_size                   ;
+    //             ahb.hburst = i_burst_type                  ;
+    //             // Control signal for load address
+    //             load_addr  = 1'b0                          ;
+    //             busy_flag  = 1'b0                          ;
+    //         end
+    //         RD_DATA_PHASE:  begin
+    //             ahb.hwrite = 1'b0         ;
+    //             ahb.hsize  = i_data_size  ;
+    //             // Control signal for load address
+    //             load_addr  = 1'b0         ;
+    //             busy_flag  = 1'b0         ;
+    //             if(ahb.hburst == SINGLE)    begin
+    //                 ahb.haddr  = ahb.hready ? i_addr : haddr_reg  ;   
+    //                 ahb.htrans = ahb_define_pkg::NONSEQ                  ;   // NONSEQUENTIAL
+    //                 ahb.hburst = i_burst_type                     ;
+    //             end
+    //             else begin
+    //                 ahb.haddr  = internal_address          ;
+    //                 ahb.htrans = ahb_define_pkg::SEQ              ;   // SEQUENTIAL
+    //                 ahb.hburst = i_burst_type              ;
+    //             end
+    //         end
+    //         WAIT_PHASE: begin
+    //             ahb.haddr  = haddr_reg               ;
+    //             ahb.hwdata = hwdata_reg              ;
+    //             ahb.hwrite = hwrite_reg              ;
+    //             ahb.hsize  = hsize_reg               ;
+    //             ahb.htrans = ahb_define_pkg::BUSY           ;   // BUSY
+    //             ahb.hburst = hburst_reg              ;
+    //             // Control signal for load address
+    //             load_addr  = 1'b1                    ;
+    //             busy_flag  = 1'b1                    ;
+    //         end
+    //         default:    begin
+    //             ahb.haddr  = i_addr         ;
+    //             ahb.hwdata = 'b0            ;
+    //             ahb.hwrite = 1'b0           ;
+    //             ahb.hsize  = i_data_size    ;
+    //             ahb.htrans = ahb_define_pkg::IDLE  ;
+    //             ahb.hburst = SINGLE         ;
+    //             // Control signal for load address
+    //             load_addr  = 1'b0           ;
+    //             busy_flag  = 1'b0           ;
+    //         end
+    //     endcase
+    // end
 
 endmodule: ahb_master

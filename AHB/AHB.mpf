@@ -880,7 +880,7 @@ Resolution = ns
 UserTimeUnit = default
 
 ; Default run length
-RunLength = 100 ns
+RunLength = 1 us
 
 ; Maximum iterations that can be run without advancing simulation time
 IterationLimit = 10000000
@@ -2044,6 +2044,7 @@ MvcHome = $MODEL_TECH/..
 ;    (e.g. SVPrettyPrintFlags=I4S,L20,C256,F4,E50,D5,Rb)
 ; SVPrettyPrintFlags=I4S
 
+DelayFileOpen = 1
 [lmc]
 ; The simulator's interface to Logic Modeling's SmartModel SWIFT software
 libsm = $MODEL_TECH/libsm.sl

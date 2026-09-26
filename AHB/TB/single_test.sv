@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-import ahb_pkg::*;
+import ahb_define_pkg::*;
 
 module ahb_top_tb;
 

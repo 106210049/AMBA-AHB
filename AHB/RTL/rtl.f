@@ -1,4 +1,4 @@
-./RTL/ahb_pkg.sv
+./RTL/ahb_define_pkg.sv
 ./RTL/ahb_master_pkg.sv
 ./RTL/ahb_slave_pkg.sv
 ./RTL/ahb_if.sv

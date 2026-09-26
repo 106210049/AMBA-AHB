@@ -7589,7 +7589,7 @@
           <mxGeometry height="40" width="40" x="840" y="839" as="geometry" />
         </mxCell>
         <mxCell id="W1ko2AkfCK_E_Y6FFSgi-18" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div style=&quot;&quot;&gt;0x7e4&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="40" x="880" y="840" as="geometry" />
+          <mxGeometry height="40" width="40" x="880" y="839" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

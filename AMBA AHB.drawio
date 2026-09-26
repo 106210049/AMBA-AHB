@@ -939,7 +939,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="AYzUWjTrgIps4r00h7mQ" name="Master FSM">
-    <mxGraphModel dx="1746" dy="922" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1156" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1075,6 +1075,15 @@
         </mxCell>
         <mxCell id="ZQ2fsFE5VQ5KrIMqH_W6-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontSize=14;" value="&lt;font&gt;&lt;b&gt;WAIT_PHASE&amp;nbsp; State:&lt;/b&gt;&lt;/font&gt;&lt;div&gt;+ HTRANS = BUSY&lt;br&gt;+ Every output is hold&lt;/div&gt;" vertex="1">
           <mxGeometry height="90" width="160" x="640" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="gsYhCwwNFSZDM_q9fcI8-1" edge="1" parent="1" source="gUlQ52oibdo8bB1fHUDe-5" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="gUlQ52oibdo8bB1fHUDe-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="350" y="510" as="sourcePoint" />
+            <mxPoint x="400" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gsYhCwwNFSZDM_q9fcI8-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="busy" vertex="1">
+          <mxGeometry height="20" width="50" x="310" y="460" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -6733,7 +6742,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="EyFpcpD1_4Xizqnk3wcF" name="WRAP4">
-    <mxGraphModel dx="1395" dy="763" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -7493,10 +7502,10 @@
         <mxCell id="B3GgPmW5I1RoqgMkA7w8-11" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div style=&quot;&quot;&gt;0x7e8&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="40" x="400" y="760" as="geometry" />
         </mxCell>
-        <mxCell id="B3GgPmW5I1RoqgMkA7w8-12" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="B3GgPmW5I1RoqgMkA7w8-12" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div style=&quot;&quot;&gt;0x7e4&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="40" x="440" y="760" as="geometry" />
         </mxCell>
-        <mxCell id="B3GgPmW5I1RoqgMkA7w8-13" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="B3GgPmW5I1RoqgMkA7w8-13" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="40" x="480" y="761" as="geometry" />
         </mxCell>
         <mxCell id="B3GgPmW5I1RoqgMkA7w8-14" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">

@@ -9491,33 +9491,6 @@
         <mxCell id="d-FXdXaYOCJ1Dw1mEDKK-173" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x4a4" vertex="1">
           <mxGeometry height="40" width="120" x="560" y="839.8" as="geometry" />
         </mxCell>
-        <mxCell id="d-FXdXaYOCJ1Dw1mEDKK-174" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x19c" vertex="1">
-          <mxGeometry height="40" width="40" x="680" y="840.1" as="geometry" />
-        </mxCell>
-        <mxCell id="d-FXdXaYOCJ1Dw1mEDKK-175" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x19e" vertex="1">
-          <mxGeometry height="40" width="40" x="720" y="841.1" as="geometry" />
-        </mxCell>
-        <mxCell id="d-FXdXaYOCJ1Dw1mEDKK-176" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x190" vertex="1">
-          <mxGeometry height="40" width="40" x="760" y="841.1" as="geometry" />
-        </mxCell>
-        <mxCell id="d-FXdXaYOCJ1Dw1mEDKK-177" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x194" vertex="1">
-          <mxGeometry height="40" width="40" x="800" y="841.1" as="geometry" />
-        </mxCell>
-        <mxCell id="d-FXdXaYOCJ1Dw1mEDKK-178" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x196" vertex="1">
-          <mxGeometry height="40" width="40" x="840" y="841.1" as="geometry" />
-        </mxCell>
-        <mxCell id="d-FXdXaYOCJ1Dw1mEDKK-179" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x198" vertex="1">
-          <mxGeometry height="40" width="40" x="880" y="839.5" as="geometry" />
-        </mxCell>
-        <mxCell id="d-FXdXaYOCJ1Dw1mEDKK-180" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x19a" vertex="1">
-          <mxGeometry height="40" width="40" x="920" y="839.5" as="geometry" />
-        </mxCell>
-        <mxCell id="d-FXdXaYOCJ1Dw1mEDKK-181" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x19c" vertex="1">
-          <mxGeometry height="40" width="40" x="960" y="838.5" as="geometry" />
-        </mxCell>
-        <mxCell id="d-FXdXaYOCJ1Dw1mEDKK-182" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x19e" vertex="1">
-          <mxGeometry height="40" width="40" x="1000" y="839.5" as="geometry" />
-        </mxCell>
         <mxCell id="d-FXdXaYOCJ1Dw1mEDKK-183" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="H" vertex="1">
           <mxGeometry height="40" width="80" x="680" y="760.4" as="geometry" />
         </mxCell>
@@ -9541,9 +9514,6 @@
         </mxCell>
         <mxCell id="d-FXdXaYOCJ1Dw1mEDKK-190" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="C" vertex="1">
           <mxGeometry height="40" width="40" x="1040" y="760.4" as="geometry" />
-        </mxCell>
-        <mxCell id="d-FXdXaYOCJ1Dw1mEDKK-191" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="0x190" vertex="1">
-          <mxGeometry height="40" width="40" x="1040" y="840.4" as="geometry" />
         </mxCell>
         <mxCell id="Kndp0iQgZViz_OQxZVbg-1" edge="1" parent="1" style="curved=1;endArrow=none;html=1;rounded=0;endFill=0;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">

@@ -7354,7 +7354,7 @@
             <mxPoint x="920" y="160" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Mu3zWVbMxMhSFR4bbAiu-109" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="&lt;div&gt;A&lt;/div&gt;" vertex="1">
+        <mxCell id="Mu3zWVbMxMhSFR4bbAiu-109" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="D" vertex="1">
           <mxGeometry height="40" width="120" x="560" y="760" as="geometry" />
         </mxCell>
         <mxCell id="Mu3zWVbMxMhSFR4bbAiu-110" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;fontStyle=1" value="C" vertex="1">
